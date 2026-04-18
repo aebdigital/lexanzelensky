@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="lexan_favicon.png">
+    
+    <!-- SEO Meta Tags -->
+    <title>Blog - LEXAN polykarbonátové riešenia</title>
+    <meta name="description" content="Blog LEXAN - novinky a informácie o polykarbonátových riešeniach, skleníkoch a stavebných materiáloch.">
+    <meta name="keywords" content="blog LEXAN, polykarbonáty novinky, skleníky blog, stavebné materiály blog">
+    <meta name="author" content="LEXAN">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexanzelensky.sk/blog">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog - LEXAN polykarbonátové riešenia">
+    <meta property="og:description" content="Blog LEXAN - novinky a informácie o polykarbonátových riešeniach, skleníkoch a stavebných materiáloch.">
+    <meta property="og:image" content="https://lexanzelensky.sk/sources/Uvodna-stranka/uvod-sluzby.png">
+    <meta property="og:url" content="https://lexanzelensky.sk/blog">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sk_SK">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - LEXAN polykarbonátové riešenia">
+    <meta name="twitter:description" content="Blog LEXAN - novinky a informácie o polykarbonátových riešeniach, skleníkoch a stavebných materiáloch.">
+    <meta name="twitter:image" content="https://lexanzelensky.sk/sources/Uvodna-stranka/uvod-sluzby.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Global Navigation Container -->
+    <div id="global-nav"></div>
+
+    <!-- Blog Hero Section -->
+    <section class="services-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/Uvodna-stranka/Posuvacia-cast-2.jpg'); background-size: cover; background-position: center;">
+        <div class="services-hero-content">
+            <div class="container">
+                <h1>Blog</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div style="text-align: center; padding: 80px 20px;">
+                <h2 style="font-size: 2.5rem; color: #333; margin-bottom: 30px;">Pripravujeme obsah</h2>
+                <p style="font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto;">
+                    Blog je momentálne v príprave. Čoskoro tu nájdete užitočné informácie 
+                    o polykarbonátových riešeniach, tipoch na montáž skleníkov a novinky 
+                    z oblasti stavebných materiálov.
+                </p>
+                
+                <div style="margin-top: 50px;">
+                    <a href="" class="contact-submit-btn">Návrat na hlavnú stránku</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer Container -->
+    <div id="global-footer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Blog page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate blog h1 on page load
+            const blogH1 = document.querySelector('.services-hero h1');
+            if (blogH1) {
+                setTimeout(() => {
+                    blogH1.classList.add('animate');
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>

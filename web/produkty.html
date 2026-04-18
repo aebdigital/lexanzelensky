@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="lexan_favicon.png">
+    
+    <!-- SEO Meta Tags -->
+    <title>Produkty - LEXAN Zelenský s.r.o. | Polykarbonáty, skleníky, HPL dosky</title>
+    <meta name="description" content="LEXAN Zelenský s.r.o. produkty: dutinkové a plné polykarbonáty LEXAN®/ARLA, HPL dosky, skleníky, trapézy, vlnovky. 3 pobočky: Trnava, Senec, Piešťany. Kvalitné riešenia pre stavebníctvo.">
+    <meta name="keywords" content="LEXAN Zelenský s.r.o., polykarbonáty LEXAN ARLA, skleníky Trnava, HPL dosky Senec, trapézy vlnovky Piešťany, dutinkové plné polykarbonáty, montáž príslušenstvo">
+    <meta name="author" content="LEXAN Zelenský s.r.o.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexanzelensky.sk/produkty">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Produkty - LEXAN Zelenský s.r.o. | Polykarbonáty a skleníky">
+    <meta property="og:description" content="LEXAN Zelenský s.r.o. - komplexná ponuka polykarbonátov, skleníkov a HPL dosiek. 3 pobočky na Slovensku s odborným poradenstvom.">
+    <meta property="og:image" content="https://lexanzelensky.sk/sources/Uvodna-stranka/uvod-sluzby.png">
+    <meta property="og:url" content="https://lexanzelensky.sk/produkty">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sk_SK">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Produkty - LEXAN Zelenský s.r.o.">
+    <meta name="twitter:description" content="LEXAN Zelenský s.r.o. - polykarbonáty, skleníky, HPL dosky. 3 pobočky na Slovensku.">
+    <meta name="twitter:image" content="https://lexanzelensky.sk/sources/Uvodna-stranka/uvod-sluzby.png">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "LEXAN",
+        "url": "https://lexan.sk"
+      },
+      "serviceType": "Stavebné práce a rekonštrukcie",
+      "description": "Kompletné služby v oblasti stavebných prác a rekonštrukcií",
+      "areaServed": "Trenčín a okolie",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Stavebné služby",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kompletná rekonštrukcia bytov",
+              "description": "Kompletné rekonštrukcie bytov na kľúč"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rekonštrukcia kúpeľní a bytových jadier",
+              "description": "Profesionálne rekonštrukcie kúpeľní a bytových jadier"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Elektrina, voda a plyn",
+              "description": "Elektrické, vodovodné a plynové inštalácie"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Services Page Specific Styles */
+        .services-hero {
+            position: relative;
+            height: 30vh;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/Uvodna-stranka/Posuvacia-cast-2.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease;
+        }
+        
+        .services-hero-content {
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        
+        .services-hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+            white-space: nowrap;
+        }
+        
+        .services-hero h1.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .services-hero p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-content {
+            display: flex;
+            min-height: calc(100vh - 30vh);
+        }
+        
+        .services-sidebar {
+            width: 350px;
+            background: #f8f9fa;
+            border-right: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            height: auto;
+            max-height: none;
+            overflow-y: visible;
+        }
+        
+        .services-sidebar h3 {
+            padding: 30px 25px 20px;
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .service-item {
+            padding: 20px 25px;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            margin-bottom: 1px;
+        }
+        
+        .service-item:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+        
+        .service-item.active {
+            background: #5a5a58;
+            color: white;
+            transform: translateX(10px);
+        }
+        
+        .service-item h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .service-item h4 .dash-line {
+            width: 15px;
+            height: 2px;
+            background: currentColor;
+            flex-shrink: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .service-item:hover h4 .dash-line {
+            width: 25px;
+        }
+        
+        .service-item:hover h4 {
+            transform: translateX(5px);
+        }
+        
+        .service-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .service-item.active p {
+            opacity: 1;
+        }
+        
+        .services-main {
+            flex: 1;
+            padding: 60px;
+            background: white;
+        }
+        
+        .service-display {
+            display: none;
+        }
+        
+        .service-display.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .service-content-wrapper {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 0px;
+        }
+        
+        .service-content-wrapper.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .service-text {
+            flex: 1;
+        }
+        
+        .service-image-container {
+            flex: 0 0 45%;
+        }
+        
+        .service-display p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .service-feature {
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #5a5a58;
+        }
+        
+        .service-feature h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .service-feature p {
+            margin: 0;
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        /* Tab Container and Tab Button Styles */
+        .tab-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 0 -3px 0;
+            border-bottom: none;
+            gap: 0;
+            background: transparent;
+            border-radius: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tab-button {
+            flex: 1;
+            min-width: 180px;
+            padding: 12px 10px !important;
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+            background-size: cover !important;
+            background-position: center !important;
+            height: auto !important;
+            min-height: 120px !important;
+            transform: none !important;
+        }
+
+        .tab-button {
+            border-radius: 0;
+        }
+
+        .tab-button:first-child {
+            border-radius: 10px 0 0 0;
+        }
+
+        .tab-button:last-child {
+            border-radius: 0 10px 0 0;
+        }
+
+        .tab-button:not(:last-child) {
+            border-right: none;
+        }
+
+        .tab-button:hover {
+            background: #e9ecef;
+            transform: none !important;
+        }
+        
+        /* Zoom effect on hover for accessory category images */
+        .tab-container .tab-button.accessory-category.aluminum-profiles:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Hliníkove-profily.png') !important;
+            background-size: 105% !important;
+            background-position: center !important;
+            transition: background-size 0.5s ease !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.plastic-profiles:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Plastove-polykarbonátove-profily.jpg') !important;
+            background-size: 105% !important;
+            background-position: center !important;
+            transition: background-size 0.5s ease !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.rubber-seals:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Spodne-a-tesniace-gumove-pasy.png') !important;
+            background-size: 105% !important;
+            background-position: center !important;
+            transition: background-size 0.5s ease !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.connecting-accessories:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Spojovacie-prislusenstvo.jpeg') !important;
+            background-size: 105% !important;
+            background-position: center !important;
+            transition: background-size 0.5s ease !important;
+        }
+
+        .tab-button.active {
+            background: white !important;
+            border: 1px solid #e0e0e0;
+            border-bottom: none;
+            box-shadow: none;
+            z-index: 3;
+            transform: none !important;
+        }
+
+        .tab-button .accessory-category-title {
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 0;
+            transition: all 0.3s ease;
+            line-height: 1.3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .tab-button.active .accessory-category-title {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-size: 0.85rem;
+        }
+        
+        /* Underline animation */
+        .tab-button .accessory-category-title {
+            position: relative;
+        }
+        
+        .tab-button .accessory-category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        
+        .tab-button:hover .accessory-category-title::after {
+            width: 100%;
+        }
+        
+        .tab-button.active .accessory-category-title::after {
+            width: 100%;
+            transition: none;
+        }
+
+        /* Remove old styles that conflict */
+        .accessory-category:not(.tab-button) {
+            border: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            background-image: none !important;
+        }
+
+        /* Specific background images for each tab with higher specificity */
+        .tab-container .tab-button.accessory-category.aluminum-profiles {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Hliníkove-profily.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            transition: background-size 0.5s ease !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.plastic-profiles {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Plastove-polykarbonátove-profily.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            transition: background-size 0.5s ease !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.rubber-seals {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Spodne-a-tesniace-gumove-pasy.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            transition: background-size 0.5s ease !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.connecting-accessories {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Spojovacie-prislusenstvo.jpeg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            transition: background-size 0.5s ease !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.aluminum-profiles.active {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Hliníkove-profily.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.plastic-profiles.active {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Plastove-polykarbonátove-profily.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.rubber-seals.active {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Spodne-a-tesniace-gumove-pasy.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        
+        .tab-container .tab-button.accessory-category.connecting-accessories.active {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sources/4.Prislusenstvo/Spojovacie-prislusenstvo.jpeg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+
+        .accessory-category-overlay {
+            display: none !important;
+        }
+
+        /* Tab content styling */
+        .category-table-wrapper {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 0 0 10px 10px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+            margin-top: 0;
+        }
+
+        /* Accessory category details - hidden by default except first one */
+        #plastic-profiles,
+        #rubber-seals,
+        #connecting-accessories {
+            display: none;
+        }
+        
+        #aluminum-profiles {
+            display: block;
+        }
+
+        /* Remove padding from first column (image column) in tables */
+        .category-table-cell:first-child {
+            padding: 0 !important;
+            height: 100% !important;
+        }
+        
+        /* Keep padding on other columns */
+        .category-table-cell:not(:first-child) {
+            padding: 15px !important;
+        }
+        
+        /* Make images bigger and fill full height of row */
+        .category-table-image {
+            width: 90px !important;
+            height: 80px !important;
+            object-fit: cover !important;
+            display: block !important;
+            cursor: pointer !important;
+            transition: opacity 0.3s ease !important;
+            border-radius: 0 !important;
+        }
+        
+        .category-table-image:hover {
+            opacity: 0.8 !important;
+        }
+        
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .lightbox-close:hover {
+            opacity: 0.7;
+        }
+
+        /* Mobile responsive for tabs */
+        @media (max-width: 768px) {
+            .tab-container {
+                flex-direction: column;
+                border-radius: 10px;
+            }
+
+            .tab-button {
+                border-radius: 0 !important;
+                border-bottom: 1px solid #e0e0e0;
+                border-right: none;
+                min-width: auto;
+            }
+
+            .tab-button:first-child {
+                border-radius: 10px 10px 0 0 !important;
+            }
+
+            .tab-button:last-child {
+                border-radius: 0 0 10px 10px !important;
+                border-bottom: 3px solid transparent;
+            }
+
+            .tab-button.active {
+                border-bottom: 1px solid #5a5a58;
+                border-left: 4px solid #5a5a58;
+            }
+
+            .tab-button.active:last-child {
+                border-bottom: 3px solid #5a5a58;
+            }
+        }
+        
+        /* Main category headings should be larger than sub-headings */
+        .service-display > .service-content-wrapper .service-text h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #333;
+            line-height: 1.2;
+        }
+        
+        .service-display h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .service-display h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .services-hero {
+                height: 25vh;
+                min-height: 150px;
+            }
+            
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .services-content {
+                flex-direction: column;
+            }
+            
+            .services-sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+            }
+            
+            .services-main {
+                padding: 15px 20px 10px 20px;
+            }
+            
+            .service-item {
+                padding: 10px 25px;
+            }
+            
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-content-wrapper {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .service-content-wrapper.reverse {
+                flex-direction: column;
+            }
+            
+            .service-image-container {
+                flex: none;
+            }
+            
+            /* Responsive heading sizes */
+            .service-display > .service-content-wrapper .service-text h2 {
+                font-size: 2.2rem;
+            }
+            
+            .service-display h3 {
+                font-size: 1.5rem;
+            }
+            
+            .service-display h4 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Global Navigation Container -->
+    <div id="global-nav"></div>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="services-hero-content">
+            <div class="container">
+                <h1>Produkty</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Content -->
+    <div class="services-content">
+        <!-- Left Sidebar -->
+        <div class="services-sidebar">
+            <h3>Výber produktu</h3>
+            
+            <div class="service-item active" onclick="showService('dutinkove-polykarbonaty')">
+                <h4>
+                    <div class="dash-line"></div>
+                    Dutinkové polykarbonáty
+                </h4>
+            </div>
+            
+            <div class="service-item" onclick="showService('plne-polykarbonaty')">
+                <h4>
+                    <div class="dash-line"></div>
+                    Plné polykarbonáty
+                </h4>
+            </div>
+            
+            <div class="service-item" onclick="showService('hpl-bond-dosky')">
+                <h4>
+                    <div class="dash-line"></div>
+                    HPL a Bond dosky
+                </h4>
+            </div>
+            
+            <div class="service-item" onclick="showService('prislusenstvo')">
+                <h4>
+                    <div class="dash-line"></div>
+                    Príslušenstvo
+                </h4>
+            </div>
+            
+            <div class="service-item" onclick="showService('trapezy-vlnovky')">
+                <h4>
+                    <div class="dash-line"></div>
+                    Trapézy a Vlnovky
+                </h4>
+            </div>
+            
+            <div class="service-item" onclick="showService('skleniky')">
+                <h4>
+                    <div class="dash-line"></div>
+                    Skleníky
+                </h4>
+            </div>
+            
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="services-main">
+            <!-- Dutinkové polykarbonáty -->
+            <div id="dutinkove-polykarbonaty" class="service-display active">
+                <div class="service-content-wrapper">
+                    <div class="service-text" style="flex: 1; max-width: 100%;">
+                        <h2>Dutinkový polykarbonát</h2>
+                        <h3>Dutinkový Lexan</h3>
+                        <p>Dutinkový polykarbonát môžete poznať pod jednoduchším názvom Lexan. Ide o platne vyrobené z vysokokvalitného termoplastického materiálu nazývaného polykarbonát. Ponúkajú skvelú kombináciu nízkej hmotnosti pri vysokej tuhosti, výborné tepelnoizolačné vlastnosti a v hlavnom rade vysokú priepustnosť svetla.</p>
+                        
+                        <p>Používajú sa v stavebníctve odvetví na prekrytie prístreškov, bazénov, svetlíkov, skleníkov a zimných záhrad.</p>
+                        
+                        <h3>PONÚKAME NEODĽAHČENÉ POLYKARBONÁTY V PLNEJ KVALITE!</h3>
+                        <p>Často sa stretávame s rôznymi napodobeninami dutinkových polykarbonátov u ktorých je uvedená výrazne menšia cena. Háčikom je nižšia hmotnosť na m2. Pri 10mm hrúbke je neodľahčená originálna hmotnosť 1,7 kg na m2. Tieto napodobeniny môžu mať hmotnosť len 1,3kg na m2. Stávajú sa tým konštrukčne nestabilnými a často nevydržia nápor vetra a snehu. Detailnejšie sa tejto problematike venujeme na následujúcom odkaze <a href="blog.html" class="link-red">tu</a>.</p>
+                    </div>
+                </div>
+                
+                <!-- LEXAN Brand Section -->
+                <div class="mt-40">
+                    <h3 class="brand-title">LEXAN® (Thermoclear*Plus)</h3>
+                    <p>Značka LEXAN® (Thermoclear*Plus) je popredným výrobcom týchto polykarbonátových platní, u ktorej nájdete široký výber hrúbok, farieb a rozmerov dutinkových polykarbonátov. Tieto platne od výroby disponujú obojstrannou ochranou proti UV žiareniu, tým pádom vekom nestrácajú farebnosť, udržujú si maximálnu kvalitovú stálosť a mechanickú odolnosť voči nárazom.</p>
+                </div>
+                
+                <!-- Technical Specifications -->
+                <div class="service-features" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; gap: 30px; align-items: flex-start;">
+                        <div class="service-feature" style="width: 60%;">
+                            <h4>TECHNICKÉ ŠPECIFIKÁCIE</h4>
+                            <p><strong>Vlastnosti:</strong><br>
+                            • Vysoká priepustnosť svetla<br>
+                            • Obojstranný UV filter, ochrana pred poveternostnými vplyvmi<br>
+                            • Vysoká nárazová odolnosť<br>
+                            • Nízka hmotnosť, jednoduchá manipulácia, spracovateľnosť a inštalácia<br>
+                            • Stálosť od –40 °C do +120 °C</p>
+                        </div>
+                        <div style="width: 40%;">
+                            <img src="sources/1.Dutinkove-polykarbonaty/1.jpg" alt="Dutinkové polykarbonáty ukážka 1" class="service-image" style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 30px; align-items: flex-start;">
+                        <div class="service-feature" style="width: 60%;">
+                            <h4>HRÚBKY A ROZMERY</h4>
+                            <p><strong>Hrúbky: </strong>4mm - (Len 1UV), 
+                                (2UV) – 4.5, 6, 8, 10, 16, 20, 25mm<br>
+                            <strong>Štandardné farby:</strong> číry, opálový mliečny, hnedý bronz, IR Green<br>
+                            <strong>Štandardné rozmery platní:</strong><br>
+                            • Šírka: 1,05 a 2,1m (pri 10mm hrúbke aj 1,2 a 1,5m)<br>
+                            • Dĺžka: 3, 3,5, 4, 4,5, 5, 6 a 7m</p>
+                        </div>
+                        <div style="width: 40%;">
+                            <img src="sources/1.Dutinkove-polykarbonaty/2.jpg" alt="Dutinkové polykarbonáty ukážka 2" class="service-image" style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 30px; align-items: flex-start;">
+                        <div class="service-feature" style="width: 60%;">
+                            <h4>DRUHY ŠTRUKTÚR</h4>
+                            <p><strong>4-8 mm:</strong> jednokomorová varianta<br>
+                            <strong>Od 10mm hrúbky:</strong> ponúkame špeciálne tepelnoizolačné štruktúry značky LEXAN® (Thermoclear*Plus) vhodné pre svetlíky priemyselných hál, zimných záhrad a vykurovaných priestorov.</p>
+                        </div>
+                        <div style="width: 40%;">
+                            <img src="sources/1.Dutinkove-polykarbonaty/3.jpg" alt="Dutinkové polykarbonáty ukážka 3" class="service-image" style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Special Products -->
+                <div class="mt-50">
+                    <h3 class="section-title-red">ŠPECIÁLNE POLYKARBONÁTY</h3>
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <h4 class="feature-title-red">ARLA SOLAR CONTROL GREY a SOLAR CONTROL TRANSPARENT</h4>
+                            <p>Švédska značka ARLA ponúka špeciálnu technológiu Solar Control. SOLAR CONTROL GREY a SOLAR CONTROL TRANSPARENT sú dosky s nižšou priepustnosťou slnečného žiarenia a nižším prenikaním tepelného žiarenia do zaskleného objektu. Použitím kombinácie špeciálnych aditív a pigmentov bolo dosiahnuté zníženie prieniku infračerveného žiarenia a tým prílišnému prehriatiu interiéru. Vďaka tomu si dosky zachovávajú vlastnosti tlmiace tepelné žiarenie počas celej životnosti dosiek.</p>
+                            
+                            <p>Významne znižujú prepúšťanie žiarenia v oblasti infračervenej časti spektra, t.j. minimalizujú skleníkový efekt.</p>
+                            
+                            <p><strong>Prednosti dutinkového polykarbonátu SOLAR CONTROL GREY a SOLAR CONTROL TRANSPARENT:</strong><br>
+                            • Poskytuje príjemnú chladnú atmosféru<br>
+                            • Moderný vzhľad, šedostrieborný odtieň<br>
+                            • Vysoká odolnosť voči ohňu<br>
+                            • Výrazné zníženie IR žiarenia<br>
+                            • Zabráňuje prílišnému prehriatiu interiéru</p>
+                        </div>
+                        <div class="service-image-container">
+                            <div class="solar-control-images" style="display: flex; gap: 15px; margin-bottom: 20px; width: 100%; overflow: hidden;">
+                                <img src="sources/1.Dutinkove-polykarbonaty/SOLAR CONTROL GREY .jpg" alt="ARLA Solar Control Grey" class="service-image" style="flex: 1; width: 50%; max-width: 50%; object-fit: cover;">
+                                <img src="sources/1.Dutinkove-polykarbonaty/SOLAR CONTROL TRANSPARENT.jpg" alt="ARLA Solar Control Transparent" class="service-image" style="flex: 1; width: 50%; max-width: 50%; object-fit: cover;">
+                            </div>
+                            <img src="sources/1.Dutinkove-polykarbonaty/5.jpg" alt="ARLA Solar Control Grey detail" class="service-image mt-20">
+                        </div>
+                    </div>
+                    
+                    <!-- Side by side containers for IR GREEN and LEXAN THERMOCLICK -->
+                    <div class="ir-thermoclick-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+                        <!-- IR GREEN Container -->
+                        <div style="display: flex; flex-direction: column;">
+                            <div class="service-text">
+                                <h4 class="feature-title-red">IR GREEN</h4>
+                                <p>Lexan IR GREEN funguje na podobnom princípe ako platne Solar Control Grey. Vyznačuje sa vysokou priepustnosťou slnečného žiarenia s kombináciou nízkej priepustnosti tepelného žiarenia. Pigmentová prímes, ktorá tlmí tepelné žiarenie je obsiahnutá priamo v materiáli, z ktorého sú dosky vyrobené. Vďaka tomu si dosky Lexan™ Solar Control™ IR zachovávajú vlastnosti tlmiace tepelné žiarenie počas celej životnosti dosiek.</p>
+                            </div>
+                            <div class="service-image-container" style="margin-top: 20px;">
+                                <img src="sources/1.Dutinkove-polykarbonaty/6.jpg" alt="IR Green polykarbonáty" class="service-image">
+                            </div>
+                        </div>
+                        
+                        <!-- LEXAN THERMOCLICK Container -->
+                        <div style="display: flex; flex-direction: column;">
+                            <div class="service-text">
+                                <h4 class="feature-title-red">LEXAN THERMOCLICK</h4>
+                                <p>Kombinácia vynikajúcich vlastností komôrkových dosiek s veľmi výhodným systémom inštalácie. Dosky sa vzájomne spájajú na spôsob pera a drážky, čo umožňuje vytvárať hladké zasklené plochy bez rušivých spojov.</p>
+                            </div>
+                            <div class="service-image-container" style="margin-top: 20px;">
+                                <img src="sources/1.Dutinkove-polykarbonaty/7.jpg" alt="Lexan Thermoclick systém" class="service-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <!-- HPL a Bond dosky -->
+            <div id="hpl-bond-dosky" class="service-display">
+                <div class="service-content-wrapper">
+                    <div class="service-text" style="flex: 1; max-width: 100%;">
+                        <h2>KOMPAKTNÉ OBKLADOVÉ HPL PLATNE</h2>
+                    </div>
+                </div>
+                
+                <!-- Čo sú to HPL platne -->
+                <div class="product-section">
+                    <h3 class="section-heading">Čo sú to HPL platne?</h3>
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <p>HPL dosky (z angličtiny High Pressure Laminate) sú veľmi odolné a pevné dosky vyrábané lisovaním niekoľkých vrstiev papiera nasiaknutého živicami pri vysokej teplote a tlaku. Vyznačujú sa tvrdým povrchom, vysokou odolnosťou proti poškriabaniu, vlhkosti, chemikáliám a mechanickému opotrebovaniu.</p>
+                            
+                            <p>Vrchná vrstva je dekoratívna a chránená odolnou melamínovou fóliou, ktorá zabezpečuje atraktívny vzhľad aj dlhodobú ochranu.</p>
+                            
+                            <p>Sú ideálnou voľbou pre projekty, kde je dôležitá kombinácia odolnosti, funkčnosti a dizajnu. Vďaka ich univerzálnosti a dlhej životnosti si našli uplatnenie v rôznych typoch stavieb — od bytových domov až po nemocnice či administratívne budovy.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Vlastnosti a použitie -->
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <div class="service-features">
+                                <div class="service-feature">
+                                    <h4>VLASTNOSTI</h4>
+                                    <p>• Vysoká mechanická pevnosť<br>
+                                    • Odolnosť voči vlhkosti, UV žiareniu, chemikáliám<br>
+                                    • Ľahká údržba<br>
+                                    • Dlhá životnosť<br>
+                                    • Rôzne dekory a povrchové úpravy (matné, lesklé, štruktúrované)</p>
+                                </div>
+                                <div class="service-feature">
+                                    <h4>POUŽITIE</h4>
+                                    <p>• <strong></strong>Interiérový dizajn</strong> – kuchynské pracovné dosky, nábytok, steny<br>
+                                    • <strong>Exteriér</strong> – fasády, balkónové zábradlia<br>
+                                    • <strong>Sanitárne priestory</strong> – kabínky, deliace steny<br>
+                                    • <strong>Doprava a priemysel</strong> – panely, podlahy, steny</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-image-container">
+                            <img src="sources/3.HPL-dosky/obrazok-1.jpg" alt="HPL platne vlastnosti a použitie" class="service-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technické špecifikácie -->
+                <div class="product-section">
+                    <h3 class="section-heading">Technické špecifikácie</h3>
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <div style="display: flex; flex-direction: column; gap: 30px;">
+                                <div class="sample-book-section" style="margin-top: 0 !important; padding: 25px; background: linear-gradient(135deg, #373735, #5a5a58, #6b6b69); border-radius: 15px; color: white; text-align: center;">
+                                    <h4 class="sample-book-title" style="color: white; margin-bottom: 12px; font-size: 0.9rem;">📄 KATALÓG SENOPLAN</h4>
+                                    <p class="sample-book-description" style="color: white; margin-bottom: 15px; font-size: 0.85rem;">Aktuálny vzorkovník a rozmery pre rok 2025 nájdete na stiahnutie tu:</p>
+                                    <a href="sources/3.HPL-dosky/senoplan-K-2024.pdf" target="_blank" class="contact-submit-btn sample-book-link" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; transition: all 0.3s ease; font-size: 0.85rem;">
+                                        Stiahnuť vzorkovník PDF
+                                    </a>
+                                </div>
+                                
+                                <div class="sample-book-section" style="margin-top: 0 !important; padding: 20px; background: white; border: 1px solid #e0e0e0; border-radius: 10px; color: black; text-align: center;">
+                                <h4 class="sample-book-title" style="color: black; margin-bottom: 12px; font-size: 0.9rem;">📋 KATALÓG KRONOART</h4>
+                                <p class="sample-book-description" style="color: black !important; margin-bottom: 15px; font-size: 0.85rem;">Komplexný katalóg produktov Kronoart s technickými špecifikáciami a vzormi:</p>
+                                <a href="sources/3.HPL-dosky/Katalog Kronoart .pdf" target="_blank" class="contact-submit-btn sample-book-link" style="background: black; color: white; border: 2px solid black; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; transition: all 0.3s ease; font-size: 0.85rem;">
+                                    Stiahnuť katalóg PDF
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-image-container">
+                            <img src="sources/3.HPL-dosky/obrazok-3.jpg" alt="HPL technické špecifikácie" class="service-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bond panely -->
+                <div class="product-section">
+                    <h2 class="large-section-heading" style="margin-top: 40px;">KOMPOZITNÉ SENDVIČOVÉ PANELY BOND</h2>
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <p>Kompozitné sendvičové panely BOND predstavujú moderné a estetické riešenie pre fasády, interiéry aj reklamné aplikácie. Vďaka svojej konštrukcii — zložené z dvoch hliníkových plechov a jadra z polyetylénu alebo minerálneho materiálu — ponúkajú výnimočnú pevnosť pri nízkej hmotnosti.</p>
+                            
+                            <div class="service-features">
+                                <div class="service-feature">
+                                    <h4>VLASTNOSTI</h4>
+                                    <p>• Vysoká odolnosť voči poveternostným vplyvom a UV žiareniu<br>
+                                    • Jednoduchá montáž a spracovanie<br>
+                                    • Dlhá životnosť a farebná stálosť<br>
+                                    • Nízka hmotnosť v porovnaní s klasickými kovovými materiálmi<br>
+                                    • Široká škála farieb a povrchových úprav</p>
+                                </div>
+                                <div class="service-feature">
+                                    <h4>POUŽITIE</h4>
+                                    <p>• Prevetrávané fasády budov<br>
+                                    • Obklady stĺpov a stien<br>
+                                    • Dizajnové interiérové prvky<br>
+                                    • Reklamné tabule, vývesky a totemy<br>
+                                    • Renovácia starších objektov</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-image-container">
+                            <img src="sources/3.HPL-dosky/obrazok-4.jpg" alt="Kompozitné BOND panely" class="service-image">
+                        </div>
+                    </div>
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <p style="margin-top: 40px;">Panely BOND sú ideálnou voľbou pre architektov, dizajnérov aj stavebné firmy, ktoré hľadajú spoľahlivý, estetický a trvácny materiál. Spájajú moderný vzhľad s praktickými vlastnosťami, vďaka čomu sa stali obľúbeným riešením v súčasnej výstavbe.</p>
+                            
+                            <p style="margin-top: 30px;">V prípade záujmu o ďalšie informácie nás neváhajte <a href="kontakt" style="text-decoration: underline; color: #5a5a58;">kontaktovať</a>.</p>
+                        </div>
+                        <div class="service-image-container">
+                            <img src="sources/3.HPL-dosky/obrazok-5.jpg" alt="BOND panely aplikácie" class="service-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Príslušenstvo -->
+            <div id="prislusenstvo" class="service-display">
+                <div class="service-content-wrapper">
+                    <div class="service-text" style="flex: 1; max-width: 100%;">
+                        <h2>VŠETKO PRE BEZCHYBNÚ MONTÁŽ LEXANU – SPOĽAHLIVÉ PRÍSLUŠENSTVO NA JEDNOM MIESTE</h2>
+                        <p>Aby bol výsledok kvalitný, odolný a dlhodobo funkčný, nestačí len dobrý materiál – potrebujete aj správne príslušenstvo. U nás nájdete všetko, čo k profesionálnej montáži potrebujete.</p>
+                        
+                        <p>Bez správneho príslušenstva riskujete netesnosti, zatekanie alebo poškodenie dosiek. Ponúkame spoľahlivé komponenty, ktoré vám zaručia bezproblémovú montáž a dlhodobú spokojnosť.</p>
+                    </div>
+                </div>
+                
+                <!-- Prehľad sortimentu -->
+                <div>
+                    <h3 class="sortiment-overview-title">Prehľad sortimentu</h3>                    
+                    <!-- Kategórie príslušenstva - Tab Style -->
+                    <div class="accessory-categories tab-container">
+                        
+                        <!-- Hliníkové profily -->
+                        <div class="accessory-category tab-button aluminum-profiles active" data-tab="aluminum-profiles" onclick="toggleCategory('aluminum-profiles')">
+                            <div class="accessory-category-content">
+                                <h4 class="accessory-category-title">Hliníkové profily</h4>
+                            </div>
+                        </div>
+                        
+                        <!-- Plastové polykarbonátové profily -->
+                        <div class="accessory-category tab-button plastic-profiles" data-tab="plastic-profiles" onclick="toggleCategory('plastic-profiles')">
+                            <div class="accessory-category-content">
+                                <h4 class="accessory-category-title">Plastové polykarbonátové profily</h4>
+                            </div>
+                        </div>
+                        
+                        <!-- Spodné a tesniace gumové pásy -->
+                        <div class="accessory-category tab-button rubber-seals" data-tab="rubber-seals" onclick="toggleCategory('rubber-seals')">
+                            <div class="accessory-category-content">
+                                <h4 class="accessory-category-title">Spodné a tesniace gumové pásy</h4>
+                            </div>
+                        </div>
+                        
+                        <!-- Spojovacie príslušenstvo -->
+                        <div class="accessory-category tab-button connecting-accessories" data-tab="connecting-accessories" onclick="toggleCategory('connecting-accessories')">
+                            <div class="accessory-category-content">
+                                <h4 class="accessory-category-title">Spojovacie príslušenstvo</h4>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Detailné kategórie - skryté pôvodne -->
+                    
+                    <!-- Hliníkové profily detail -->
+                    <div id="aluminum-profiles">
+                        <div class="category-table-wrapper">
+                            <table class="category-table">
+                                <thead>
+                                    <tr class="category-table-header">
+                                        <th>Obrázok</th>
+                                        <th>Názov profilu</th>
+                                        <th>Dostupná farba</th>
+                                        <th>Dostupné rozmery (m)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 1.png" alt="Prítlačná lišta 60mm" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Prítlačná lišta 60mm</td>
+                                        <td class="category-table-cell">Bez povrchovej úpravy, bronz elox, antracit šedý</td>
+                                        <td class="category-table-cell">2, 3, 3,5, 4, 5, 7</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 4.PNG" alt="Prítlačná lišta 50mm" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Prítlačná lišta 50mm</td>
+                                        <td class="category-table-cell">Bez povrchovej úpravy</td>
+                                        <td class="category-table-cell">2, 3, 3,5, 4, 5, 7</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 5.jpg" alt="H profil" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">H profil 10mm a 16mm</td>
+                                        <td class="category-table-cell">Bez povrchovej úpravy</td>
+                                        <td class="category-table-cell">2, 3, 6</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 6.jpg" alt="F Profil" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">F Profil 6, 8, 10, 16mm</td>
+                                        <td class="category-table-cell">Bez povrchovej úpravy, bronz elox, antracit šedý</td>
+                                        <td class="category-table-cell">2,133, 3,20, 4,266, 6,40</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 9.jpg" alt="U profil 6,8mm" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">U profil 6, 8 mm</td>
+                                        <td class="category-table-cell">Bez povrchovej úpravy</td>
+                                        <td class="category-table-cell">2, 3, 6</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 10.jpg" alt="U profil 10,16mm" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">U profil 10, 16mm</td>
+                                        <td class="category-table-cell">Strieborný elox, bronz elox</td>
+                                        <td class="category-table-cell">2,133, 3,20, 4,266, 6,40</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 12.jpg" alt="Nástenný S Profil" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Nástenný S Profil</td>
+                                        <td class="category-table-cell">Bez povrchovej úpravy, bronz elox, antracit šedý</td>
+                                        <td class="category-table-cell">2,133, 3,20, 4,266, 6,40</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 14.jpg" alt="L Profil" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">L Profil 15x15, 20x20, 25x25, 30x30, 40x20, 40x40</td>
+                                        <td class="category-table-cell">Bez povrchovej úpravy</td>
+                                        <td class="category-table-cell">2, 3, 6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 16.jpg" alt="Pásovina" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Pásovina 30 a 40mm</td>
+                                        <td class="category-table-cell">Bez povrchovej úpravy</td>
+                                        <td class="category-table-cell">2, 3, 6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Plastové polykarbonátové profily detail -->
+                    <div id="plastic-profiles">
+                        <div class="category-table-wrapper">
+                            <table class="category-table">
+                                <thead>
+                                    <tr class="category-table-header">
+                                        <th>Obrázok</th>
+                                        <th>Názov profilu</th>
+                                        <th>Dostupné rozmery (m)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 17.PNG" alt="U profil PC" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">U profil PC 4,6,8,10 a 16mm</td>
+                                        <td class="category-table-cell">2,1m</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 18.PNG" alt="H profil PC" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">H profil PC 4,6,8,10 a 16mm<br><small class="text-small-gray">(Pri 10 a 16mm verziách sú profily dostupné aj v prevedení hnedý bronz)</small></td>
+                                        <td class="category-table-cell">2, 3, 4 a 6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Spodné a tesniace gumové pásy detail -->
+                    <div id="rubber-seals">
+                        <div class="category-table-wrapper">
+                            <table class="category-table">
+                                <thead>
+                                    <tr class="category-table-header">
+                                        <th>Obrázok</th>
+                                        <th>Názov</th>
+                                        <th>Dostupnosť</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 19.jpg" alt="Tesnenie 60mm" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Tesnenie do prítlačnej lišty 60mm</td>
+                                        <td class="category-table-cell">Bežné metre</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 20.jpg" alt="Tesnenie 50mm" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Tesnenie do prítlačnej lišty 50mm</td>
+                                        <td class="category-table-cell">Bežné metre</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 21.jpg" alt="Spodná guma" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Spodná guma 50, 60 a 80mm</td>
+                                        <td class="category-table-cell">Bežné metre</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 22.jpg" alt="Tesnenie S profil" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Tesnenie do nástenného S Profilu</td>
+                                        <td class="category-table-cell">Bežné metre</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/new 1.jpg" alt="Tesniaca páska s filtrom" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Tesniaca páska s filtrom 28/38mm</td>
+                                        <td class="category-table-cell">Bežné metre</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/new 2.jpg" alt="Tesniaca páska bez filtra" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Tesniaca páska bez filtra 28/38mm</td>
+                                        <td class="category-table-cell">Bežné metre</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Spojovacie príslušenstvo detail -->
+                    <div id="connecting-accessories">
+                        <div class="category-table-wrapper">
+                            <table class="category-table">
+                                <thead>
+                                    <tr class="category-table-header">
+                                        <th>Obrázok</th>
+                                        <th>Názov</th>
+                                        <th>Rozmery</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 23.jpg" alt="Vrut do dreva" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Vrut do dreva</td>
+                                        <td class="category-table-cell">40, 50, 60 a 70mm</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 24.jpg" alt="Tex samorezný" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Tex samorezný</td>
+                                        <td class="category-table-cell">25, 32, 38, 45, 50 a 60mm</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/obrazok 25.jpg" alt="Podložka" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Podložka malá a veľká</td>
+                                        <td class="category-table-cell">-</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/Obrazok 26.jpg" alt="Podložka nerezová" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Podložka nerezová</td>
+                                        <td class="category-table-cell">-</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/new 3.jpeg" alt="Silikón Sikacil C" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">Silikón Sikacil C 300ml</td>
+                                        <td class="category-table-cell">300ml</td>
+                                    </tr>
+                                    <tr class="category-table-row">
+                                        <td class="category-table-cell"><img src="sources/4.Prislusenstvo/new 4.jpg" alt="FIX Lepidlo" class="category-table-image"></td>
+                                        <td class="category-table-cell font-weight-600">FIX Lepidlo 290ml, transparent</td>
+                                        <td class="category-table-cell">290ml</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Contact section for all accessories -->
+                <div class="category-contact-section" style="margin-top: 40px; padding: 25px; background: linear-gradient(135deg, #373735, #5a5a58, #6b6b69); border-radius: 15px;">
+                    <p style="color: white; margin-bottom: 15px;">Pre viac info alebo iné profily nás neváhajte navštíviť alebo kontaktovať prostredníctvom mailu alebo tel. čísla</p>
+                    <a href="kontakt" class="category-contact-link" style="color: white; text-decoration: underline;">Kontakty a pobočky →</a>
+                </div>
+            </div>
+            
+            <!-- Plné polykarbonáty -->
+            <div id="plne-polykarbonaty" class="service-display">
+                <div class="service-content-wrapper">
+                    <div class="service-text" style="flex: 1; max-width: 100%;">
+                        <h2>PLNÉ POLYKARBONÁTY</h2>
+                    </div>
+                </div>
+                
+                <!-- Rozdiel medzi plexisklom a polykarbonátom -->
+                <div class="product-section">
+                    <h3 class="section-heading">Rozdiel medzi plným Lexanom a plexisklom</h3>
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <p>Často sa stretávame, že naši zákazníci majú plné polykarbonáty a plexisklá za rovnaký materiál. Na prvý pohľad by sa to tak mohlo zdať, ale nieje to pravda.</p>
+                            
+                            <p>Plexisklo sa vyrába z polymetylmetakrylátu, známejšieho pod slovom ako akrylát. Akrylát je síce 5 krát pevnejší ako sklo ale stále krehkejší ako plný polykarbonát.</p>
+                            
+                            <p>Plný polykarbonát, vyrábaný z termoplastického materiálu, ktorý je mimoriadne odolný proti nárazom. Zasklievanie polykarbonátom sa v súčasnosti pokladá za najbezpečnejšie na svete. Tieto plné polykarbonáty sú prakticky nerozbitné, disponujú vysokou odolnosťou voči teplu vysokou priehľadnosťou (až 90% svetla), pri vŕtaní nepraská a má lepšiu chemickú odolnosť.</p>
+                        </div>
+                        
+                        <div class="service-image-container">
+                            <img src="sources/2.Plne-polykarbonaty/1.jpg" alt="Porovnanie polykarbonátu a plexiskla" class="service-image">
+                        </div>
+                    </div>
+                    
+                    <!-- Comparison table -->
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr class="table-header">
+                                    <th class="table-cell">Vlastnosti</th>
+                                    <th class="table-cell">Plný polykarbonát</th>
+                                    <th class="table-cell">Plexisklo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td class="table-cell-white">Nárazuvzdornosť</td>
+                                    <td class="table-cell-success">Extrémne vysoká, 250 krát odolnšejší ako plexisklo</td>
+                                    <td class="table-cell-danger">Oveľa krehkejšie, pri bežnej manipulácíj môže puknúť</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell-white">Pevnosť</td>
+                                    <td class="table-cell-success">Veľmi pevný a húževnatý materiál</td>
+                                    <td class="table-cell-danger">Tvrdý, môže sa lámať</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell-white">UV odolnosť</td>
+                                    <td class="table-cell-success">UV stabilný z oboch strán platne</td>
+                                    <td class="table-cell-danger">Zvyčajne bez UV ochrany</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell-white">Tepelná odolnosť</td>
+                                    <td class="table-cell-success">-40 °C až +120 °C</td>
+                                    <td class="table-cell-warning">cca -30 °C až +70 °C</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell-white">Opracovanie</td>
+                                    <td class="table-cell-success">Dobre sa ohýba za studena a tvaruje za tepla, vŕta, frézuje</td>
+                                    <td class="table-cell-danger">Nemožnosť vŕtať (puká), rezanie je náročnejšie s väčšou šancou prasknutia</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cell-white">Použitie</td>
+                                    <td class="table-cell-success">Vhodné do exteriéru (prístrešky, kryty bazénov, zimné záhrady, svetlíky) a na bezpečnostné zasklievanie (športové štadióny, bilboardy, automaty)</td>
+                                    <td class="table-cell-warning">Vhodnejší do interiéru na použitie reklám, vitrín, dizajnových aplikicií</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="product-section" style="margin-top: 40px;">
+                    <p>Plné polykarbonáty ponúkame v značkách od svetoznámych výrobcov LEXAN™ pod označením EXELLD, švajčiarskej poprednej značky MACROLUX SOLID XL a švédskej firmy ARLA. Všetky tieto značky sú našimi dlhodobými a overenými partnermi, ktoré disponujú overenou kvalitou.</p>
+                </div>
+                
+                <!-- Technical Specifications -->
+                <div class="product-section">
+                    <h3 class="section-heading">Technické špecifikácie</h3>
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <div class="service-features" class="no-margin-top">
+                                <div class="service-feature">
+                                    <h4>HRÚBKY</h4>
+                                    <p><strong>Skladom:</strong> 3, 4, 5, 6, 8, 9,5 mm<br>
+                                    <strong>Na objednávku:</strong> 2, 10, 12, 15 mm</p>
+                                </div>
+                                <div class="service-feature">
+                                    <h4>ŠTANDARDNÉ FARBY</h4>
+                                    <p>• Číry priehľadný<br>
+                                    • Bronzový hnedý<br>
+                                    • Opálový mliečny<br>
+                                    • Šedý antracit</p>
+                                </div>
+                                <div class="service-feature">
+                                    <h4>ŠTANDARDNÉ ROZMERY PLATNÍ</h4>
+                                    <p><strong>Šírka:</strong> 2,05 m / 1,025 m<br>
+                                    <strong>Dĺžky:</strong><br>
+                                    • 3,05 m (skladom)<br>
+                                    • 3,6 / 4,6 / 6,1 m (na objednávku)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-image-container">
+                            <img src="sources/2.Plne-polykarbonaty/2.jpg" alt="Technické špecifikácie plných polykarbonátov" class="service-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Special products -->
+                <div class="product-section">
+                    <h3 class="section-heading" style="margin-top: 40px;">Iné druhy plných polykarbonátov</h3>
+                    
+                    <div class="service-features" class="service-features grid-2col">
+                        <div class="service-feature" class="feature-info">
+                            <h4 class="feature-title-red">LEXAN™ MARGARD</h4>
+                            <p>Špeciálna obojstranná povrchová úprava, zabezpečujúca ochranu proti povrchovému poškodeniu, bežným chemikáliám a sprejom (antigrafiti). Bol vyvinutí na ochranu pracovných miest, objektov, ktoré je potreba zabezpečiť pred drsným okolím ako sú rôzne kryty vysokotlakových strojov, dopravná technika alebo bezpečnostné presklenia či vytríny.</p>
+                            <div class="mt-20 text-center">
+                                <img src="sources/2.Plne-polykarbonaty/4.jpg" alt="Lexan Margard" class="feature-image">
+                            </div>
+                        </div>
+                        
+                        <div class="service-feature" class="feature-info">
+                            <h4 class="feature-title-red">LEXAN™ 9030</h4>
+                            <p>Ide o kvalitný polykarbonát bez UV Ochrany, vhodný najmä do interiéru. Vynika vysokou priehľadnosťou a odolnosťou voči nárazom. Vďaka svojej húževnatosti sa dá ohýbať za studena a tvarovať za tepla a preto si nájde svoje uplatnenie aj v priemysle na výrobu ochranných krytov alebo komponentov strojov.</p>
+                            <div class="mt-20 text-center">
+                                <img src="sources/2.Plne-polykarbonaty/5.jpg" alt="Lexan 9030" class="feature-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trapézy a Vlnovky -->
+            <div id="trapezy-vlnovky" class="service-display">
+                <div class="service-content-wrapper">
+                    <div class="service-text" style="flex: 1; max-width: 100%;">
+                        <h2 class="mobile-smaller-title">POLYKARBONÁTOVÉ TRAPÉZY A VLNOVKY</h2>
+                        <p>Trapézy a vlnovky vyrobené z polykarbonátu sa vyznačujú vysokou odolnosťou a pružnosťou. Jednoduchá montáž na strešné laty bez použitia akýchkoľvek profilov len pomocou skrutiek a podložiek je jednou z mnohých predností tohto materiálu.</p>
+                        
+                        <p>Dostupné sú v transparentnom alebo bronzovom prevedení s povrchom typu „krupička". Táto úprava zabezpečuje lepší rozptyl svetla a zároveň zvyšuje odolnosť voči poškrabaniu. Medzi hlavné výhody týchto dosiek patrí ich nízka hmotnosť, mimoriadna odolnosť voči nárazom a krupobitiu, dlhá životnosť a schopnosť odolávať extrémnym teplotám.</p>
+                    </div>
+                </div>
+                
+                <!-- Obrázky produktov -->
+                <div class="service-content-wrapper mt-40">
+                    <div class="service-image-container">
+                        <img src="sources/5.Trapezy-a-Vlnovky/fotka 1.jpg" alt="Trapézy detailný pohľad" class="service-image">
+                    </div>
+                    <div class="service-image-container">
+                        <img src="sources/5.Trapezy-a-Vlnovky/fotka 2.jpg" alt="Vlnovky detailný pohľad" class="service-image">
+                    </div>
+                </div>
+                
+                <!-- Technické špecifikácie -->
+                <div class="product-section">
+                    <h3 class="section-heading" style="margin-top: 40px;">Technické špecifikácie</h3>
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <h4 class="feature-title-medium">Štandardné rozmery platní</h4>
+                            
+                            <div class="service-features mt-20">
+                                <div class="service-feature">
+                                    <h4>HRÚBKA</h4>
+                                    <p><strong>Trapéz:</strong> 0,8 mm hrúbka<br><br>
+                                    <strong>Vlnovky:</strong><br>
+                                    • 1,2 mm hrúbka<br>
+                                    • 2,8 mm hrúbka</p>
+                                </div>
+                                
+                                <div class="service-feature">
+                                    <h4>ŠÍRKA</h4>
+                                    <p><strong>Trapéz:</strong> 1060 mm<br><br>
+                                    <strong>Vlnovky:</strong><br>
+                                    • 1260 mm (pri 1,2 mm hrúbke)<br>
+                                    • 1045 mm (pri 2,8 mm hrúbke)</p>
+                                </div>
+                                
+                                <div class="service-feature">
+                                    <h4>DĹŽKY</h4>
+                                    <p>2, 2,5, 3, 3,5, 4, 5, 6, 7 m<br><br>
+                                    <em>Dostupné pre všetky typy</em></p>
+                                </div>
+                                
+                                <div class="service-feature">
+                                    <h4>ŠTANDARDNÉ FARBY</h4>
+                                    <p><strong>Základné:</strong><br>
+                                    • Číra<br>
+                                    • Hnedá bronzová<br><br>
+                                    <strong>Špeciálne prevedenie:</strong><br>
+                                    • Solar Control Silver<br>
+                                    <small class="text-small-gray">(dostupné pri trapézoch)</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-image-container">
+                            <img src="sources/5.Trapezy-a-Vlnovky/obrazok 3.jpg" alt="Technické detaily trapézov a vlnoviek" class="service-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skleníky -->
+            <div id="skleniky" class="service-display">
+                <div class="service-content-wrapper">
+                    <div class="service-text" style="flex: 1; max-width: 100%;">
+                        <h2 class="mobile-smaller-title">KVALITNÉ POLYKARBONÁTOVÉ SKLENÍKY</h2>
+                        <h3 class="section-heading">Kvalita, odolnosť a jednoduchá montáž</h3>
+                        <p>Hľadáte spoľahlivý a odolný skleník, ktorý vám poskytne ideálne podmienky pre pestovanie počas celého roka? Ponúkame vám záhradné polykarbonátové skleníky, ktoré vynikajú svojou kvalitou a dlhou životnosťou v kombinácii so službou profesionálnej montáže. Spolupracou s našim dlhoročným a overeným partnerom NADOO s.r.o. získate komplexné riešenie bez starostí.</p>
+                    </div>
+                </div>
+                
+                <!-- Kvalita, odolnosť a jednoduchá montáž content -->
+                <div class="product-section">
+                    
+                    <div class="service-content-wrapper">
+                        <div class="service-text">
+                            <h4 class="feature-title-medium">Kvalitné materiály pre maximálnu životnosť</h4>
+                            
+                            <p>Bežne dostupné skleníky sú vyrobené z menej kvalitného 4mm polykarbonátu, ktorý je UV stabilný len z jednej strany. Naše skleníky sú vyrobené z dutinkového polykarbonátu s hrúbkou 4,5 a na vyžiadanie aj 6mm, ktorý je UV stabilný z oboch strán, má o 20% vyššiu hmotnosť oproti 4mm polykarbonátu, tým pádom je jeho prevedenie kvalitnejšie, materiál pevnejší a má lepšie termoizolačné vlastnosti.</p>
+                            
+                            <p>Nemusíte sa obávať poškodenia pred slnečným žiarením – vaše rastliny budú chránené pred nebezpečným UV žiarením, zatiaľ čo vy si užijete bezstarostné pestovanie po dlhé roky.</p>
+                            
+                            <p>Nosná konštrukcia je vyrobená z hliníku, to umožňuje so skleníkom ľahkú manipuláciu a možnosťou jednoduchého prekladania. Skleník nepotrebuje žiadne základy, stačia vám úchytné kotvy, ktoré sú súčasťou skleníka.</p>
+                        </div>
+                        <div class="service-image-container">
+                            <img src="sources/6.Skleniky/obrazok-1.jpg" alt="Detaily skleníka" class="service-image">
+                        </div>
+                    </div>
+                    
+                    <!-- Ďalšie obrázky -->
+                    <div class="service-content-wrapper mt-40">
+                        <div class="service-image-container">
+                            <img src="sources/6.Skleniky/obrazok-2.jpg" alt="Konštrukcia skleníka" class="service-image">
+                        </div>
+                        <div class="service-image-container">
+                            <img src="sources/6.Skleniky/obrazok-3.jpg" alt="Montáž skleníka" class="service-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technické parametre -->
+                <div class="product-section">
+                    <h3 class="section-heading" style="margin-top: 40px;">Technické parametre</h3>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <h4>MATERIÁL</h4>
+                            <p>• Dutinkový polykarbonát<br>
+                            • Hliníková konštrukcia<br>
+                            • UV stabilný z oboch strán</p>
+                        </div>
+                        
+                        <div class="service-feature">
+                            <h4>ŠÍRKA</h4>
+                            <p>• 2,5 m<br>
+                            • 3 m<br>
+                            • Možnosť prispôsobenia na mieru</p>
+                        </div>
+                        
+                        <div class="service-feature">
+                            <h4>DĹŽKA</h4>
+                            <p>2, 3, 4, 5, 6 m<br><br>
+                            <em>Štandardné rozmery</em></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Prečo si vybrať práve nás -->
+                <div class="product-section">
+                    <h3 class="section-heading" style="margin-top: 40px;">Prečo si vybrať práve nás?</h3>
+                    
+                    <div class="service-features">
+                        <div class="feature-success">
+                            <h4>KVALITNÝ MATERIÁL</h4>
+                            <p>Odolný 4,5 mm a 6 mm UV stabilný polykarbonát</p>
+                        </div>
+                        
+                        <div class="feature-info">
+                            <h4>KONŠTRUKCIA</h4>
+                            <p>Kvalitná hliníková konštrukcia bez hrdzе</p>
+                        </div>
+                        
+                        <div class="feature-warning">
+                            <h4>PROFESIONÁLNA MONTÁŽ</h4>
+                            <p>Možnosť profesionálnej montáže</p>
+                        </div>
+                        
+                        <div class="feature-purple">
+                            <h4>RÝCHLE DODANIE</h4>
+                            <p>Rýchle dodanie a individuálny prístup</p>
+                        </div>
+                        
+                        <div class="feature-green">
+                            <h4>UNIVERZÁLNE POUŽITIE</h4>
+                            <p>Ideálne riešenie pre záhradkárov aj profesionálov</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Záverečné informácie -->
+                <div class="product-section">
+                    <p style="margin-top: 40px;">Ponúkame skleníky v štandardných rozmeroch, ale ako výrobca vieme rozmery upravovať na želanie zákazníka. Nevyrábame iba oblukové skleníky, ale vieme vyrobiť aj atypické rozmery so šikmou strechou, kde sa používajú hrubšie materiály ako pri oblúkových.</p>
+                    
+                    <div class="cta-container-red-large">
+                        <h4 class="cta-title-white-large">🏡 DOPRAJTE SVOJEJ ZÁHRADE KVALITNÝ SKLENÍK</h4>
+                        <p class="cta-text">Pre nezáväznú cenovú ponuku alebo informácie o dostupných modeloch a veľkostiach neváhajte kontaktovať nášho partnera NADOO s.r.o., kde nájdete bližšie informácie. Radi vám pomôžeme vybrať to najlepšie riešenie pre vaše potreby.</p>
+                        
+                        <div class="button-container">
+                            <a href="https://nadoo.sk" target="_blank" class="cta-button-white">
+                                🌐 Navštíviť NADOO.sk
+                            </a>
+                            <a href="kontakt" class="cta-button-white">
+                                📞 Kontaktovať nás
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upratovanie a odvoz odpadu -->
+            <div id="upratovanie-odvoz" class="service-display">
+                <h2>Upratovanie a odvoz odpadu</h2>
+                <div class="service-content-wrapper reverse">
+                    <div class="service-image-container">
+                        <img src="sources/portfolio/01.jpg" alt="Upratovanie" class="service-image">
+                    </div>
+                    <div class="service-text">
+                        <p>Po skončení rekonštrukcie po sebe zanechávame poriadok. Všetok stavebný a demolačný odpad z rekonštrukcie vytriedime a odvezieme na zberné miesto.</p>
+                        
+                        <p>Priestory dôkladne vyčistíme od prachu, zvyškov materiálu a stavebného neporiadku. Zákazník dostane byt pripravený na nasťahovanie – čistý, voňavý a bezpečný.</p>
+                        
+                        <p>V rámci služby ponúkame aj možnosť ekologickej likvidácie starých zariadení či nábytku.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Global Footer Container -->
+    <div id="global-footer"></div>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Services page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate services h1 on page load
+            const servicesH1 = document.querySelector('.services-hero h1');
+            if (servicesH1) {
+                setTimeout(() => {
+                    servicesH1.classList.add('animate');
+                }, 100);
+            }
+            
+            // Check for URL parameter to preselect service
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = urlParams.get('service');
+            
+            if (serviceParam) {
+                // Find the service item with matching onclick attribute
+                const serviceItems = document.querySelectorAll('.service-item');
+                serviceItems.forEach(item => {
+                    const onclickAttr = item.getAttribute('onclick');
+                    if (onclickAttr && onclickAttr.includes(serviceParam)) {
+                        // Remove active class from current active item
+                        document.querySelector('.service-item.active').classList.remove('active');
+                        document.querySelector('.service-display.active').classList.remove('active');
+                        
+                        // Activate the selected service
+                        item.classList.add('active');
+                        document.getElementById(serviceParam).classList.add('active');
+                        
+                        // Update hero background for the selected service
+                        updateHeroBackground(serviceParam);
+                    }
+                });
+            } else {
+                // If no URL parameter, ensure default (dutinkove-polykarbonaty) hero background is set
+                updateHeroBackground('dutinkove-polykarbonaty');
+            }
+            
+            // Initialize first accessory category as active
+            const firstCategoryCard = document.querySelector('.accessory-category.aluminum-profiles');
+            if (firstCategoryCard) {
+                firstCategoryCard.style.borderColor = '#5a5a58';
+            }
+        });
+        
+        // Service toggle functionality
+        function showService(serviceId) {
+            // Remove active class from all items and displays
+            document.querySelectorAll('.service-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelectorAll('.service-display').forEach(display => {
+                display.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            event.target.closest('.service-item').classList.add('active');
+            
+            // Show selected service display
+            document.getElementById(serviceId).classList.add('active');
+            
+            // Update hero background based on selected service
+            updateHeroBackground(serviceId);
+        }
+        
+        // Function to update hero background based on selected category
+        function updateHeroBackground(serviceId) {
+            const heroSection = document.querySelector('.services-hero');
+            let backgroundImage = '';
+            
+            switch(serviceId) {
+                case 'dutinkove-polykarbonaty':
+                    backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/1.Dutinkove-polykarbonaty/Fotka-za-nazvom.jpg')";
+                    break;
+                case 'plne-polykarbonaty':
+                    backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/2.Plne-polykarbonaty/Obrazok-za-hlavnym-nadpisom.jpg')";
+                    break;
+                case 'hpl-bond-dosky':
+                    backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/3.HPL-dosky/obrazok-za-hlavnym-nadpisom.jpg')";
+                    break;
+                case 'prislusenstvo':
+                    backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/4.Prislusenstvo/Fotka-za-hlavnym-nadpisom.jpeg')";
+                    break;
+                case 'trapezy-vlnovky':
+                    backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/5.Trapezy-a-Vlnovky/fotka-za-hlavny-nadpis.jpg')";
+                    break;
+                case 'skleniky':
+                    backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/6.Skleniky/fotka-za-hlavnym-nadpisom.jpg')";
+                    break;
+                default:
+                    backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/1.Dutinkove-polykarbonaty/Fotka-za-nazvom.jpg')";
+            }
+            
+            if (heroSection) {
+                heroSection.style.background = backgroundImage;
+                heroSection.style.backgroundSize = 'cover';
+                heroSection.style.backgroundPosition = 'center';
+            }
+        }
+        
+        // Category toggle functionality for accessories
+        function toggleCategory(categoryId) {
+            const categoryDetail = document.getElementById(categoryId);
+            const allCategories = document.querySelectorAll('#aluminum-profiles, #plastic-profiles, #rubber-seals, #connecting-accessories');
+            const allTabs = document.querySelectorAll('.tab-button');
+            
+            // Hide all category tables first
+            allCategories.forEach(category => {
+                category.style.display = 'none';
+            });
+            
+            // Remove active class from all tabs
+            allTabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show the clicked category table
+            categoryDetail.style.display = 'block';
+            categoryDetail.style.animation = 'fadeIn 0.5s ease';
+            
+            // Add active class to clicked tab
+            const activeTab = document.querySelector(`[data-tab="${categoryId}"]`);
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
+        }
+        
+        // Lightbox functionality
+        function openLightbox(imageSrc, imageAlt) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = imageSrc;
+            lightboxImage.alt = imageAlt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+        
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+        
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+        
+        // Initialize lightbox for all accessory images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.category-table-image');
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    openLightbox(this.src, this.alt);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

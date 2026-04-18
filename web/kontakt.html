@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="lexan_favicon.png">
+    
+    <!-- SEO Meta Tags -->
+    <title>Kontakt - LEXAN Zelenský s.r.o. | 3 pobočky: Trnava, Senec, Piešťany</title>
+    <meta name="description" content="Kontakt LEXAN Zelenský s.r.o. - 3 pobočky na Slovensku: Trnava (+421 905 504 756), Senec (+421 917 323 441), Piešťany (+421 948 442 156). Polykarbonátové riešenia, odborné poradenstvo.">
+    <meta name="keywords" content="LEXAN Zelenský s.r.o. kontakt, Trnava polykarbonáty, Senec HPL dosky, Piešťany skleníky, pobočky Slovensko, polykarbonáty konzultácie">
+    <meta name="author" content="LEXAN Zelenský s.r.o.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexanzelensky.sk/kontakt">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kontakt - LEXAN Zelenský s.r.o. | 3 pobočky na Slovensku">
+    <meta property="og:description" content="LEXAN Zelenský s.r.o. s 3 pobočkami: Trnava, Senec, Piešťany. Polykarbonátové riešenia, odborné poradenstvo a komplex servis.">
+    <meta property="og:image" content="https://lexanzelensky.sk/new.png">
+    <meta property="og:url" content="https://lexanzelensky.sk/kontakt">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sk_SK">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kontakt - LEXAN Zelenský s.r.o. | 3 pobočky">
+    <meta name="twitter:description" content="LEXAN Zelenský s.r.o. - 3 pobočky na Slovensku. Polykarbonátové riešenia a odborné poradenstvo.">
+    <meta name="twitter:image" content="https://lexanzelensky.sk/new.png">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "LEXAN Zelenský s.r.o.",
+      "description": "LEXAN Zelenský s.r.o. - špecialista na polykarbonátové riešenia s 3 pobočkami na Slovensku (Trnava, Senec, Piešťany). Predaj LEXAN a ARLA polykarbonátov, HPL dosiek, skleníkov.",
+      "url": "https://lexanzelensky.sk",
+      "telephone": "+421905504756",
+      "email": "zelenskystefan@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Staviteľská 3",
+        "addressLocality": "Bratislava",
+        "postalCode": "831 04",
+        "addressCountry": "SK"
+      },
+      "openingHours": "Mo-Fr 08:00-16:00",
+      "sameAs": [
+        "https://lexan.sk"
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Contact Page Specific Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        
+        .contact-hero {
+            position: relative;
+            height: 30vh;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .contact-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+        
+        .contact-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        
+        .contact-hero-content {
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        
+        .contact-hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .contact-hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        /* Location Cards Styles */
+        .locations-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .location-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .clickable-location {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .clickable-location:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(221, 27, 27, 0.2);
+            border: 2px solid rgba(221, 27, 27, 0.1);
+        }
+        
+        .clickable-location:active {
+            transform: translateY(-3px);
+        }
+        
+        .location-card.selected {
+            border: 2px solid #5a5a58;
+            background: linear-gradient(135deg, #fff, #fef5f5);
+            transform: translateY(-5px);
+        }
+        
+        /* Active indicator styles */
+        .location-card .active-indicator {
+            background: white;
+            border-color: #ccc;
+        }
+        
+        .location-card .active-indicator .inner-circle {
+            background: transparent;
+            width: 16px;
+            height: 16px;
+            margin: 5px;
+        }
+        
+        .location-card.selected .active-indicator {
+            border-color: #5a5a58 !important;
+        }
+        
+        .location-card.selected .active-indicator .inner-circle {
+            background: #666 !important;
+            width: 20px !important;
+            height: 20px !important;
+            margin: 3px !important;
+        }
+        
+        .location-card:hover .active-indicator .inner-circle {
+            transform: scale(1.2);
+        }
+        
+        .location-card.selected:hover .active-indicator .inner-circle {
+            transform: scale(1.3);
+            background: #5a5a58;
+        }
+        
+        /* Enhanced Form Styles */
+        .file-upload-area:hover {
+            border-color: #5a5a58;
+            background: #fef5f5;
+        }
+        
+        .file-upload-area.dragover {
+            border-color: #5a5a58;
+            background: #fef5f5;
+            transform: scale(1.02);
+        }
+        
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #5a5a58;
+        }
+        
+        .file-item-name {
+            font-size: 0.9rem;
+            color: #333;
+        }
+        
+        .file-item-size {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .file-remove-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.3s ease;
+        }
+        
+        .file-remove-btn:hover {
+            background: #c82333;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: #5a5a58;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #5a5a58;
+        }
+        
+        .location-icon {
+            width: 50px;
+            height: 50px;
+            background: #5a5a58;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto 20px auto;
+        }
+        
+        .location-card h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .location-card p {
+            color: #666;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        
+        .location-card p strong {
+            color: #5a5a58;
+        }
+        
+        /* Contact Form and Map Container */
+        .contact-form-map-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .contact-form-side {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .map-side {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        /* Map Styles */
+        .map-wrapper {
+            position: relative;
+        }
+        
+        .map-wrapper h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        
+        .map-container {
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slovakia-map {
+            width: 100%;
+            height: 400px;
+        }
+        
+        .location-pin {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .location-pin:hover {
+            transform: scale(1.1);
+        }
+        
+        .location-details {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            min-width: 200px;
+            z-index: 10;
+        }
+        
+        .location-details.show {
+            display: block;
+        }
+        
+        .location-details h4 {
+            color: #5a5a58;
+            margin-bottom: 10px;
+        }
+        
+        .location-details p {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .contact-form-wrapper h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 0;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            background: white;
+            color: #333;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #5a5a58;
+        }
+        
+        .contact-submit-btn {
+            background: #5a5a58;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .contact-submit-btn:hover {
+            background: #b01515;
+        }
+        
+        .contact-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-info-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: #5a5a58;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .contact-details p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .contact-details a {
+            color: #5a5a58;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-details a:hover {
+            color: #b01515;
+        }
+        
+        .contact-business-info {
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 0;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-business-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .business-details p {
+            margin-bottom: 5px;
+        }
+        
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .contact-hero {
+                height: 25vh;
+                min-height: 150px;
+            }
+            
+            .contact-hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-form-map-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .contact-form-side,
+            .map-side {
+                flex: none;
+                width: 100%;
+            }
+            
+            .address-boxes-wrapper h2,
+            .map-wrapper h2 {
+                font-size: 2rem !important;
+            }
+            
+            .map-container {
+                height: 350px !important;
+            }
+            
+            .map-container iframe {
+                height: 300px !important;
+            }
+            
+            .location-card {
+                padding: 20px !important;
+            }
+            
+            .location-card h3 {
+                font-size: 1.1rem !important;
+            }
+            
+            .location-icon {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            
+            .location-icon svg {
+                width: 18px !important;
+                height: 18px !important;
+            }
+            
+            .contact-form-side {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            
+            .contact-section .container {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            
+            .contact-form-side h2,
+            .contact-form-side p,
+            .map-side h2 {
+                padding-left: 30px !important;
+                padding-right: 30px !important;
+            }
+            
+            .contact-form-side h2,
+            .map-side h2 {
+                font-size: 2rem !important;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            #location-info-overlay {
+                position: static !important;
+                margin-top: 20px;
+                width: 100%;
+                max-width: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Global Navigation Container -->
+    <div id="global-nav"></div>
+
+    <!-- Contact Hero Section -->
+    <section class="services-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('sources/Uvodna-stranka/Posuvacia-cast-2.jpg'); background-size: cover; background-position: center;">
+        <div class="services-hero-content">
+            <div class="container">
+                <h1>Kontakt</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address Bubbles on top -->
+    <section class="contact-section" style="background: #f8f9fa; padding: 60px 0 0 0;">
+        <div class="container">
+            <div class="address-boxes" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 40px;">
+                        <!-- Trnava -->
+                        <div class="location-card clickable-location" onclick="showLocationOnMap('trnava')" data-city="trnava" style="background: white; padding: 25px; border-radius: 10px; text-align: left; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); cursor: pointer; transition: all 0.3s ease; border: 1px solid #e0e0e0; position: relative;">
+                            <!-- Active indicator circle -->
+                            <div class="active-indicator" style="position: absolute; top: -15px; left: -15px; width: 30px; height: 30px; border-radius: 50%; background: white; border: 2px solid #ccc; transition: all 0.3s ease; z-index: 2;">
+                                <div class="inner-circle" style="width: 16px; height: 16px; border-radius: 50%; background: transparent; margin: 5px; transition: all 0.3s ease;"></div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                                <div class="location-icon" style="width: 50px; height: 50px; background: #5a5a58; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 style="font-size: 1.3rem; color: #333; margin-bottom: 10px; margin-top: 0;">Trnava</h3>
+                                    <p style="color: #666; margin-bottom: 5px; line-height: 1.4;">Suchovská cesta 12</p>
+                                    <p style="margin-bottom: 5px; line-height: 1.4;"><strong style="color: #5a5a58;">+421 905 504 756</strong></p>
+                                    <p style="color: #666; margin-bottom: 0;">zelenskystefan@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Senec -->
+                        <div class="location-card clickable-location" onclick="showLocationOnMap('senec')" data-city="senec" style="background: white; padding: 25px; border-radius: 10px; text-align: left; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); cursor: pointer; transition: all 0.3s ease; border: 1px solid #e0e0e0; position: relative;">
+                            <!-- Active indicator circle -->
+                            <div class="active-indicator" style="position: absolute; top: -15px; left: -15px; width: 30px; height: 30px; border-radius: 50%; background: white; border: 2px solid #ccc; transition: all 0.3s ease; z-index: 2;">
+                                <div class="inner-circle" style="width: 16px; height: 16px; border-radius: 50%; background: transparent; margin: 5px; transition: all 0.3s ease;"></div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                                <div class="location-icon" style="width: 50px; height: 50px; background: #5a5a58; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 style="font-size: 1.3rem; color: #333; margin-bottom: 10px; margin-top: 0;">Senec</h3>
+                                    <p style="color: #666; margin-bottom: 5px; line-height: 1.4;">Fučíkova 8</p>
+                                    <p style="margin-bottom: 5px; line-height: 1.4;"><strong style="color: #5a5a58;">+421 917 323 441</strong></p>
+                                    <p style="color: #666; margin-bottom: 0;">zelenskysenec@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Piešťany -->
+                        <div class="location-card clickable-location" onclick="showLocationOnMap('piestany')" data-city="piestany" style="background: white; padding: 25px; border-radius: 10px; text-align: left; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); cursor: pointer; transition: all 0.3s ease; border: 1px solid #e0e0e0; position: relative;">
+                            <!-- Active indicator circle -->
+                            <div class="active-indicator" style="position: absolute; top: -15px; left: -15px; width: 30px; height: 30px; border-radius: 50%; background: white; border: 2px solid #ccc; transition: all 0.3s ease; z-index: 2;">
+                                <div class="inner-circle" style="width: 16px; height: 16px; border-radius: 50%; background: transparent; margin: 5px; transition: all 0.3s ease;"></div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                                <div class="location-icon" style="width: 50px; height: 50px; background: #5a5a58; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 style="font-size: 1.3rem; color: #333; margin-bottom: 10px; margin-top: 0;">Piešťany</h3>
+                                    <p style="color: #666; margin-bottom: 5px; line-height: 1.4;">Rekreačná 3</p>
+                                    <p style="margin-bottom: 5px; line-height: 1.4;"><strong style="color: #5a5a58;">+421 948 442 156</strong></p>
+                                    <p style="color: #666; margin-bottom: 0;">zelenskypiestany@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form and Map Section -->
+    <section class="contact-section" style="background: white; padding: 60px 0;">
+        <div class="container">
+            <div class="contact-form-map-container" style="display: flex; gap: 40px; align-items: flex-start;">
+                <!-- Left Side - Contact Form -->
+                <div class="contact-form-side" style="flex: 1; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                    <h2 style="font-size: 2.5rem; font-weight: 600; color: #333; margin-bottom: 15px;">Zaujala vás naša ponuka?</h2>
+                    <p style="color: #666; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+                        Kontaktujte nás ešte dnes pre cenovú ponuku na mieru alebo si vyžiadajte vzorku.
+                    </p>
+                    <form class="contact-form" id="enhanced-contact-form" style="background: transparent; border-radius: 15px;">
+                    <!-- Branch Selection -->
+                    <div class="form-group">
+                        <label for="branch">Vyberte pobočku, ktorú chcete kontaktovať *</label>
+                        <select id="branch" name="branch" required style="padding: 15px; border: 1px solid #e0e0e0; font-size: 16px; width: 100%; background: white; font-family: 'Montserrat', sans-serif;">
+                            <option value="">-- Vyberte pobočku --</option>
+                            <option value="trnava" data-email="trnava@lexanzelensky.sk">LEXAN Trnava</option>
+                            <option value="senec" data-email="senec@lexanzelensky.sk">LEXAN Senec</option>
+                            <option value="piestany" data-email="piestany@lexanzelensky.sk">LEXAN Piešťany</option>
+                        </select>
+                        <div id="branch-email-display" style="margin-top: 8px; font-size: 0.9rem; color: #5a5a58; font-style: italic;"></div>
+                    </div>
+
+                    <!-- Project Requirements -->
+                    <div class="form-group">
+                        <label for="requirements">Stručný opis vašich požiadaviek *</label>
+                        <textarea id="requirements" name="requirements" rows="5" required 
+                            placeholder="Opíšte, čo potrebujete: typ polykarbonátu, farbu, rozmery, účel použitia, množstvo, termín realizácie, atď..."
+                            style="padding: 15px; border: 1px solid #e0e0e0; font-size: 16px; width: 100%; font-family: 'Montserrat', sans-serif; resize: vertical; min-height: 120px;"></textarea>
+                        <div style="font-size: 0.85rem; color: #666; margin-top: 5px;">
+                            Napríklad: "Potrebujem dutinkové polykarbonáty pre skleník 6x4m, hrúbka 10mm, transparentné, včítane montážneho príslušenstva"
+                        </div>
+                    </div>
+
+                    <!-- Customer Contact Information -->
+                    <div class="form-group">
+                        <label style="font-size: 1.1rem; font-weight: 600; margin-bottom: 15px; display: block;">Vaše kontaktné údaje *</label>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer-name">Meno a priezvisko *</label>
+                                <input type="text" id="customer-name" name="customer-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-email">Email *</label>
+                                <input type="email" id="customer-email" name="customer-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-phone">Telefónne číslo</label>
+                            <input type="tel" id="customer-phone" name="customer-phone" placeholder="+421 XXX XXX XXX">
+                        </div>
+                    </div>
+
+                    <!-- File Upload Section -->
+                    <div class="form-group">
+                        <label for="file-upload">Nahrávanie súborov a fotiek</label>
+                        <div class="file-upload-area" onclick="document.getElementById('file-upload').click()" 
+                             style="border: 2px dashed #e0e0e0; padding: 30px; text-align: center; cursor: pointer; transition: all 0.3s ease; background: #fafafa;">
+                            <div style="color: #666; font-size: 1rem;">
+                                <svg width="48" height="48" style="margin-bottom: 10px; opacity: 0.5;" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <p style="margin: 0; font-weight: 500;">Kliknite pre nahranie súborov</p>
+                                <p style="margin: 5px 0 0 0; font-size: 0.9rem;">Nákresy, fotografie, technické špecifikácie</p>
+                                <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: #999;">Maximálne 10MB na súbor | JPG, PNG, PDF, DWG</p>
+                            </div>
+                        </div>
+                        <input type="file" id="file-upload" name="files[]" multiple 
+                               accept=".jpg,.jpeg,.png,.pdf,.dwg,.doc,.docx" 
+                               style="display: none;" 
+                               onchange="handleFileSelection(this)">
+                        <div id="file-list" style="margin-top: 15px;"></div>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn" style="margin-top: 30px;">Odoslať požiadavku</button>
+                </form>
+                </div>
+
+                <!-- Right Side - Map -->
+                <div class="map-side" style="flex: 1; min-width: 0;">
+                    <h2 style="font-size: 2.5rem; font-weight: 600; margin-bottom: 2rem; color: #333;">Mapa pobočiek</h2>
+                    <div class="map-container" style="position: relative; background: #f8f9fa; border-radius: 15px; padding: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); height: 480px;">
+                        <!-- Default map showing Slovakia -->
+                        <iframe id="map-iframe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171498.7055214399!2d16.972656825781246!3d48.337784099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c89360aca6197%3A0x631f9b82fd884368!2sBratislava%2C%20Slovakia!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="440" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                        <!-- Location info overlay -->
+                        <div class="location-overlay" style="position: absolute; top: 20px; left: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: none;" id="location-overlay">
+                            <div id="overlay-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer Container -->
+    <div id="global-footer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact page functionality with interactive map
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate contact h1 on page load
+            const contactH1 = document.querySelector('.services-hero h1');
+            if (contactH1) {
+                setTimeout(() => {
+                    contactH1.classList.add('animate');
+                }, 100);
+            }
+            // Map iframe element
+            const mapIframe = document.getElementById('map-iframe');
+            const locationOverlay = document.getElementById('location-overlay');
+            
+            // Location data with Google Maps embed URLs
+            const locationData = {
+                bratislava: {
+                    name: 'Bratislava',
+                    address: 'Staviteľská 3, Bratislava',
+                    phone: '+421 949 046 616',
+                    email: 'zelenskybratislava@gmail.com',
+                    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.5234567890123!2d17.107137!3d48.148598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f10.1!3m3!1m2!1s0x476c8956f3a8b123%3A0x456789!2sStavite%C4%BEsk%C3%A1%203%2C%20Bratislava%2C%20Slovakia!5e0!3m2!1sen!2sus!4v1704067300000!5m2!1sen!2sus'
+                },
+                trnava: {
+                    name: 'Trnava',
+                    address: 'Suchovská cesta 12, Trnava',
+                    phone: '+421 905 504 756',
+                    email: 'zelenskystefan@gmail.com',
+                    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.123!2d17.5672411!3d48.3875424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f17!3m3!1m2!1s0x476ca0f2b83640c5%3A0x9a72e88f4ec5cc5b!2sLEXAN%20ZELENSK%C3%9D!5e0!3m2!1sen!2sus!4v1704067400000!5m2!1sen!2sus'
+                },
+                senec: {
+                    name: 'Senec',
+                    address: 'Fučíkova 8, Senec',
+                    phone: '+421 917 323 441',
+                    email: 'zelenskysenec@gmail.com',
+                    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.988!2d17.4072609!3d48.2207027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f17!3m3!1m2!1s0x476c9ceb05cc2067%3A0xd39dfa206e9fc66d!2sLEXAN%20Zelensk%C3%BD%20s.r.o.%20-%20Senec!5e0!3m2!1sen!2sus!4v1704067500000!5m2!1sen!2sus'
+                },
+                piestany: {
+                    name: 'Piešťany',
+                    address: 'Rekreačná 3, Piešťany',
+                    phone: '+421 948 442 156',
+                    email: 'zelenskypiestany@gmail.com',
+                    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.346!2d17.8174863!3d48.5746797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f17.53!3m3!1m2!1s0x476b54f2ce58794b%3A0xefcc9dd7245ed679!2sLEXAN%20Zelensk%C3%BD%20s.r.o.%20-%20Pie%C5%A1%C5%A5any!5e0!3m2!1sen!2sus!4v1704067600000!5m2!1sen!2sus'
+                }
+            };
+            
+            // Function to show location on map
+            window.showLocationOnMap = function(cityKey) {
+                const location = locationData[cityKey];
+                if (!location) return;
+                
+                // Update map iframe source
+                mapIframe.src = location.mapUrl;
+                
+                // Update location cards selection
+                document.querySelectorAll('.location-card').forEach(card => {
+                    card.classList.remove('selected');
+                });
+                document.querySelector(`[data-city="${cityKey}"]`).classList.add('selected');
+                
+                // Update form branch selection
+                const branchSelect = document.getElementById('branch');
+                const emailDisplay = document.getElementById('branch-email-display');
+                if (branchSelect && branchSelect.value !== cityKey) {
+                    branchSelect.value = cityKey;
+                    const selectedOption = branchSelect.options[branchSelect.selectedIndex];
+                    if (selectedOption.dataset.email) {
+                        emailDisplay.textContent = `Správa bude odoslaná na: ${selectedOption.dataset.email}`;
+                    }
+                }
+                
+                // Update overlay information
+                if (locationOverlay) {
+                    locationOverlay.innerHTML = `
+                    <h4 style="color: #5a5a58; margin-bottom: 15px; font-size: 1.2rem;">${location.name}</h4>
+                    <div style="font-size: 0.9rem; line-height: 1.6;">
+                        <p style="margin-bottom: 10px;"><strong>Adresa:</strong> ${location.address}</p>
+                        <p style="margin-bottom: 10px;"><strong>Tel:</strong> <a href="tel:${location.phone}" style="color: #5a5a58;">${location.phone}</a></p>
+                        <p style="margin-bottom: 10px;"><strong>Email:</strong> <a href="mailto:${location.email}" style="color: #5a5a58;">${location.email}</a></p>
+                        <p style="margin-bottom: 0;"><strong>Otváracie hodiny:</strong><br>Pondelok – Piatok: 8:00 – 16:00<br>Sobota – Nedeľa: zatvorené</p>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <button onclick="resetMap()" style="background: #5a5a58; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 0.8rem;">Zobrazit všetky pobočky</button>
+                        </div>
+                    </div>
+                `;
+                
+                    // Add visual feedback
+                    locationOverlay.style.background = 'linear-gradient(135deg, #fff, #fef5f5)';
+                    setTimeout(() => {
+                        locationOverlay.style.background = 'white';
+                    }, 1000);
+                }
+            };
+            
+            // Function to reset map to show all locations
+            window.resetMap = function() {
+                mapIframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171498.7055214399!2d16.972656825781246!3d48.337784099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c89360aca6197%3A0x631f9b82fd884368!2sBratislava%2C%20Slovakia!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus';
+                
+                // Remove selection from all cards
+                document.querySelectorAll('.location-card').forEach(card => {
+                    card.classList.remove('selected');
+                });
+                
+                // Clear form selection
+                const branchSelect = document.getElementById('branch');
+                const emailDisplay = document.getElementById('branch-email-display');
+                if (branchSelect && branchSelect.value !== '') {
+                    branchSelect.value = '';
+                    emailDisplay.textContent = '';
+                }
+                
+                // Reset overlay content
+                if (locationOverlay) {
+                    locationOverlay.innerHTML = `
+                    <h4 style="color: #5a5a58; margin-bottom: 10px; font-size: 1.1rem;">Naše pobočky</h4>
+                    <div style="font-size: 0.9rem; line-height: 1.4;">
+                        <p style="margin-bottom: 8px;"><strong>Bratislava:</strong> Staviteľská 3</p>
+                        <p style="margin-bottom: 8px;"><strong>Trnava:</strong> Suchovská cesta 12</p>
+                        <p style="margin-bottom: 8px;"><strong>Senec:</strong> Fučíkova 8</p>
+                        <p style="margin-bottom: 8px;"><strong>Piešťany:</strong> Rekreačná 3</p>
+                        <p style="margin-top: 15px; font-size: 0.8rem; color: #666; font-style: italic;">Kliknite na pobočku pre zobrazenie na mape</p>
+                    </div>
+                `;
+                }
+            };
+            
+            // Enhanced form functionality
+            initializeEnhancedForm();
+            
+            // Auto-select Trnava on page load
+            setTimeout(() => {
+                showLocationOnMap('trnava');
+            }, 500);
+        });
+        
+        // Initialize enhanced contact form
+        function initializeEnhancedForm() {
+            const branchSelect = document.getElementById('branch');
+            const emailDisplay = document.getElementById('branch-email-display');
+            const fileUploadArea = document.querySelector('.file-upload-area');
+            const fileInput = document.getElementById('file-upload');
+            
+            // Branch selection handler
+            branchSelect.addEventListener('change', function() {
+                const selectedOption = this.options[this.selectedIndex];
+                if (selectedOption.value) {
+                    const email = selectedOption.dataset.email;
+                    emailDisplay.textContent = `Správa bude odoslaná na: ${email}`;
+                    
+                    // Show selected branch location on map
+                    showLocationOnMap(selectedOption.value);
+                } else {
+                    emailDisplay.textContent = '';
+                    
+                    // Reset map to show all locations when nothing is selected
+                    resetMap();
+                }
+            });
+            
+            // File upload drag and drop
+            if (fileUploadArea) {
+                fileUploadArea.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    this.classList.add('dragover');
+                });
+                
+                fileUploadArea.addEventListener('dragleave', function(e) {
+                    e.preventDefault();
+                    this.classList.remove('dragover');
+                });
+                
+                fileUploadArea.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.classList.remove('dragover');
+                    const files = e.dataTransfer.files;
+                    handleFileSelection({ files: files });
+                });
+            }
+        }
+        
+        // Handle file selection
+        function handleFileSelection(input) {
+            const fileList = document.getElementById('file-list');
+            const files = Array.from(input.files);
+            
+            files.forEach(file => {
+                // Validate file size (10MB limit)
+                if (file.size > 10 * 1024 * 1024) {
+                    alert(`Súbor "${file.name}" je príliš veľký. Maximálna veľkosť je 10MB.`);
+                    return;
+                }
+                
+                // Create file item element
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <div>
+                        <div class="file-item-name">${file.name}</div>
+                        <div class="file-item-size">${formatFileSize(file.size)}</div>
+                    </div>
+                    <button type="button" class="file-remove-btn" onclick="removeFile(this)">Odstrániť</button>
+                `;
+                
+                fileList.appendChild(fileItem);
+            });
+        }
+        
+        // Remove file from list
+        function removeFile(button) {
+            button.parentElement.remove();
+        }
+        
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        
+        // Form submission handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('enhanced-contact-form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Capture form reference for use in callbacks
+                    const currentForm = this;
+                    
+                    // Show loading state
+                    const submitBtn = form.querySelector('.contact-submit-btn');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Odosiela sa...';
+                    submitBtn.disabled = true;
+                    
+                    // Get form data
+                    const formData = new FormData(currentForm);
+                    const branch = formData.get('branch');
+                    const requirements = formData.get('requirements');
+                    const customerName = formData.get('customer-name');
+                    const customerEmail = formData.get('customer-email');
+                    
+                    // Validate required fields
+                    if (!branch) {
+                        alert('Prosím vyberte pobočku.');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        return;
+                    }
+                    
+                    if (!requirements.trim()) {
+                        alert('Prosím opíšte vaše požiadavky.');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        return;
+                    }
+                    
+                    if (!customerName.trim()) {
+                        alert('Prosím zadajte vaše meno.');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        return;
+                    }
+                    
+                    if (!customerEmail.trim()) {
+                        alert('Prosím zadajte váš email.');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        return;
+                    }
+                    
+                    console.log('Form data:', {branch, requirements, customerName, customerEmail});
+                    
+                    // Send to PHP handler
+                    fetch('contact-handler.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        console.log('Response status:', response.status);
+                        console.log('Response headers:', response.headers.get('content-type'));
+                        return response.text(); // Get as text first to debug
+                    })
+                    .then(responseText => {
+                        console.log('Raw response:', responseText);
+                        try {
+                            const data = JSON.parse(responseText);
+                            if (data.success) {
+                                alert(data.message);
+                                // Reset form on success
+                                currentForm.reset();
+                                document.getElementById('branch-email-display').textContent = '';
+                                resetMap();
+                            } else {
+                                alert('Chyba: ' + data.message);
+                            }
+                        } catch (e) {
+                            console.error('JSON parse error:', e);
+                            console.error('Response was:', responseText);
+                            alert('Chyba: Neplatná odpoveď zo servera.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Fetch error:', error);
+                        alert('Nastala chyba pri odosielaní formulára: ' + error.message);
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
