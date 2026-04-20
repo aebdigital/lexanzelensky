@@ -4,6 +4,8 @@ import { supabase } from "../../../lib/supabase";
 import { PageHero } from "../../../components/page-hero";
 import Link from "next/link";
 
+export const revalidate = 0;
+
 type Props = {
   params: Promise<{ slug: string }>;
 };

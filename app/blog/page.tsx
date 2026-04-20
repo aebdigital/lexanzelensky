@@ -4,6 +4,8 @@ import { PageHero } from "../../components/page-hero";
 import { legacyMetadata } from "../../lib/seo";
 import { supabase } from "../../lib/supabase";
 
+export const revalidate = 0;
+
 export const metadata: Metadata = legacyMetadata("blog");
 
 export default async function BlogPage() {
