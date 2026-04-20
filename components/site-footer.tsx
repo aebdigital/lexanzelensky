@@ -1,11 +1,39 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { products } from "../lib/site-data";
 
 export function SiteFooter() {
   const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [cookieBannerOpen, setCookieBannerOpen] = useState(false);
+  const [cookieModalOpen, setCookieModalOpen] = useState(false);
+  const [consents, setConsents] = useState({ analytics: false, marketing: false });
+  const [cookieInitialized, setCookieInitialized] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("lexan_cookie_settings");
+    if (saved) {
+      setConsents(JSON.parse(saved));
+    } else {
+      setCookieBannerOpen(true);
+    }
+    setCookieInitialized(true);
+  }, []);
+
+  function saveAllCookies() {
+    const all = { analytics: true, marketing: true };
+    localStorage.setItem("lexan_cookie_settings", JSON.stringify(all));
+    setConsents(all);
+    setCookieBannerOpen(false);
+    setCookieModalOpen(false);
+  }
+
+  function saveSelectedCookies() {
+    localStorage.setItem("lexan_cookie_settings", JSON.stringify(consents));
+    setCookieBannerOpen(false);
+    setCookieModalOpen(false);
+  }
 
   return (
     <>
@@ -92,6 +120,11 @@ export function SiteFooter() {
                       Ochrana osobných údajov
                     </button>
                   </li>
+                  <li>
+                    <button type="button" className="footer-link-button" onClick={() => { setCookieBannerOpen(false); setCookieModalOpen(true); }}>
+                      Nastavenie cookies
+                    </button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -162,6 +195,124 @@ export function SiteFooter() {
           </div>
         </div>
       ) : null}
+
+      {cookieInitialized && cookieBannerOpen && (
+        <div className="cookie-banner-wrapper">
+          <div className="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title">
+            <div className="cookie-banner-content text-left">
+              <h3 id="cookie-banner-title">Vyjadrite svoj súhlas s používaním cookies</h3>
+              <p>
+                Aby sme vám mohli poskytnúť najlepší možný zážitok a aby naša stránka fungovala správne, potrebujeme váš súhlas s využívaním súborov cookies.
+              </p>
+            </div>
+            <div className="cookie-banner-actions">
+              <button 
+                type="button" 
+                className="cookie-btn-settings" 
+                onClick={() => { setCookieBannerOpen(false); setCookieModalOpen(true); }}
+              >
+                Nastavenia
+              </button>
+              <button 
+                type="button" 
+                className="cookie-btn-accept" 
+                onClick={saveAllCookies}
+              >
+                Prijať všetky
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {cookieModalOpen && (
+        <div className="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title">
+          <button
+            type="button"
+            className="privacy-modal-overlay"
+            aria-label="Zatvoriť nastavenia cookies"
+            onClick={() => setCookieModalOpen(false)}
+          />
+          <div className="privacy-modal-content cookie-modal-content">
+            <div className="privacy-modal-header">
+              <h2 id="cookie-settings-title">Nastavenie cookies</h2>
+              <button type="button" className="privacy-modal-close" onClick={() => setCookieModalOpen(false)}>
+                &times;
+              </button>
+            </div>
+            <div className="privacy-modal-body cookie-settings-body">
+              <p className="mb-6 text-[15px] leading-relaxed text-[#666]">
+                Vyberte si úroveň súborov cookies, s akou si prajete túto stránku naďalej prezerať. Tieto preferencie si samozrejme môžete kedykoľvek v budúcnosti ľubovoľne pozmeniť.
+              </p>
+              
+              <div className="cookie-settings-group">
+                <div className="cookie-settings-row">
+                  <div className="cookie-settings-info">
+                    <h4>Nevyhnutné cookies</h4>
+                    <p>Zabezpečujú správne fungovanie základných funkcií webovej stránky. Bez nich by stránka nevedela bezpečne fungovať. Sú predvolené ako aktívne a nie je možné ich vypnúť.</p>
+                  </div>
+                  <div className="cookie-settings-toggle locked">
+                    <div className="toggle-switch active cursor-not-allowed opacity-50">
+                      <div className="toggle-slider"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="cookie-settings-row">
+                  <div className="cookie-settings-info">
+                    <h4>Analytické cookies</h4>
+                    <p>Pomáhajú nám pochopiť, ako našu webovú stránku používate, čo nám umožňuje neustále zlepšovať jej obsah a funkčnosť pre čo najlepší používateľský zážitok.</p>
+                  </div>
+                  <div className="cookie-settings-toggle">
+                    <button 
+                      type="button"
+                      className={`toggle-switch ${consents.analytics ? 'active' : ''}`}
+                      onClick={() => setConsents(prev => ({ ...prev, analytics: !prev.analytics }))}
+                      aria-pressed={consents.analytics}
+                    >
+                      <div className="toggle-slider"></div>
+                    </button>
+                  </div>
+                </div>
+
+                <div className="cookie-settings-row !border-b-0">
+                  <div className="cookie-settings-info">
+                    <h4>Marketingové cookies</h4>
+                    <p>Využívame ich na sledovanie a vyhodnocovanie výkonnosti našich digitálnych kampaní, vďaka čomu vám vieme ponúkať relevantnejšie a cielené ponuky a reklamy.</p>
+                  </div>
+                  <div className="cookie-settings-toggle">
+                    <button 
+                      type="button"
+                      className={`toggle-switch ${consents.marketing ? 'active' : ''}`}
+                      onClick={() => setConsents(prev => ({ ...prev, marketing: !prev.marketing }))}
+                      aria-pressed={consents.marketing}
+                    >
+                      <div className="toggle-slider"></div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col md:flex-row items-center justify-end gap-3 mt-8">
+                <button 
+                  type="button" 
+                  className="legacy-button-dark w-full md:w-auto text-center justify-center !py-3 !px-6" 
+                  onClick={saveSelectedCookies}
+                >
+                  Uložiť predvoľby
+                </button>
+                <button 
+                  type="button" 
+                  className="legacy-button-primary w-full md:w-auto text-center !py-3 !px-6" 
+                  onClick={saveAllCookies}
+                >
+                  Prijať všetky
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

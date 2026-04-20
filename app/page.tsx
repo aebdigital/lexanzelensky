@@ -17,7 +17,7 @@ export default function HomePage() {
           <div className="home-about-grid">
             <div>
               <span className="home-about-label">— Kto sme</span>
-              <h2 className="home-about-title">O NÁS</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mt-2 mb-6">O nás</h2>
 
               <div className="home-about-copy">
                 <p>
@@ -57,7 +57,7 @@ export default function HomePage() {
 
       <section className="partners-section">
         <div className="site-container">
-          <h2 className="partners-title">Naši partneri</h2>
+          <h2 className="section-title-center mb-8">Naši partneri</h2>
           <div className="partners-grid">
             {partnerLogos.map((partner) => (
               <a
