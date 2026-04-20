@@ -280,28 +280,7 @@ export function ContactPageClient() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-                <div className="location-overlay">
-                  <h4>{selectedBranch.city}</h4>
-                  <p>
-                    <strong>Adresa:</strong> {selectedBranch.address}
-                  </p>
-                  <p>
-                    <strong>Tel:</strong>{" "}
-                    <a href={`tel:${selectedBranch.phone.replace(/\s+/g, "")}`}>
-                      {selectedBranch.phone}
-                    </a>
-                  </p>
-                  <p>
-                    <strong>Email:</strong> <a href={`mailto:${selectedBranch.email}`}>{selectedBranch.email}</a>
-                  </p>
-                  <p>
-                    <strong>Otváracie hodiny:</strong>
-                    <br />
-                    Pondelok – Piatok: 8:00 – 16:00
-                    <br />
-                    Sobota – Nedeľa: zatvorené
-                  </p>
-                </div>
+
               </div>
             </div>
           </div>

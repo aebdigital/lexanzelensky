@@ -37,7 +37,7 @@ img {
 
 @layer components {
   .site-container {
-    @apply mx-auto max-w-[95%] px-5;
+    @apply mx-auto w-[90vw] md:w-auto md:max-w-[95%] px-0 md:px-5;
   }
 
   .content-block {
@@ -250,16 +250,16 @@ img {
   align-items: flex-end;
   justify-content: space-between;
   gap: 60px;
-  padding: 0 20px 60px;
+  padding: 0 0 60px;
 }
 
 .home-hero-text {
-  max-width: 700px;
+  max-width: 900px;
   flex: 1;
 }
 
 .home-hero-text h1 {
-  max-width: 650px;
+  max-width: 850px;
   margin-bottom: 20px;
   font-size: 4rem;
   font-weight: 700;
@@ -517,9 +517,9 @@ img {
 }
 
 .page-hero h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
@@ -1736,11 +1736,15 @@ img {
     padding-bottom: 40px;
   }
 
-  .home-hero-text h1,
-  .page-hero h1,
-  .contact-hero-content h1 {
+  .home-hero-text h1 {
     font-size: 2.7rem;
     letter-spacing: 2px;
+  }
+
+  .page-hero h1,
+  .contact-hero-content h1 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
   }
 
   .home-about-title,
@@ -1762,7 +1766,7 @@ img {
   }
 
   .products-main {
-    padding: 30px 20px;
+    padding: 30px 0;
   }
 
   .legacy-product-text h2 {

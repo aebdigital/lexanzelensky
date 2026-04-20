@@ -13,24 +13,6 @@ type ContactFile = {
 };
 
 export async function POST(request: Request) {
-  const apiKey = process.env.SMTP2GO_API_KEY;
-  const sender = process.env.SMTP2GO_SENDER;
-  const recipients = text(process.env.CONTACT_FORM_RECIPIENT)
-    .split(",")
-    .map((recipient) => recipient.trim())
-    .filter(Boolean);
-
-  if (!apiKey || !sender || recipients.length === 0) {
-    return Response.json(
-      {
-        success: false,
-        message:
-          "Kontaktný formulár nie je nakonfigurovaný. Skontrolujte CONTACT_FORM_RECIPIENT, SMTP2GO_API_KEY a SMTP2GO_SENDER."
-      },
-      { status: 500 }
-    );
-  }
-
   let payload: Record<string, unknown>;
   try {
     payload = await request.json();
@@ -43,14 +25,44 @@ export async function POST(request: Request) {
       { status: 400 }
     );
   }
+
   const name = text(payload.name);
   const email = text(payload.email);
   const message = text(payload.message);
   const phone = text(payload.phone);
   const subject = text(payload.subject) || "Kontaktný formulár LEXAN";
+  const branchKey = text(payload.branch);
   const branchLabel = text(payload.branchLabel);
   const branchEmail = text(payload.branchEmail);
   const files: ContactFile[] = Array.isArray(payload.files) ? payload.files : [];
+
+  const apiKey = process.env.SMTP2GO_API_KEY;
+  const sender = process.env.SMTP2GO_SENDER;
+
+  let recipientString = process.env.CONTACT_FORM_RECIPIENT;
+  if (branchKey === "trnava" && process.env.CONTACT_TRNAVA) {
+    recipientString = process.env.CONTACT_TRNAVA;
+  } else if (branchKey === "senec" && process.env.CONTACT_SENEC) {
+    recipientString = process.env.CONTACT_SENEC;
+  } else if (branchKey === "piestany" && process.env.CONTACT_PIESTANY) {
+    recipientString = process.env.CONTACT_PIESTANY;
+  }
+
+  const recipients = text(recipientString)
+    .split(",")
+    .map((recipient) => recipient.trim())
+    .filter(Boolean);
+
+  if (!apiKey || !sender || recipients.length === 0) {
+    return Response.json(
+      {
+        success: false,
+        message:
+          "Kontaktný formulár nie je nakonfigurovaný. Skontrolujte email adresy pre pobočky, SMTP2GO_API_KEY a SMTP2GO_SENDER."
+      },
+      { status: 500 }
+    );
+  }
 
   if (!name || !email || !message) {
     return Response.json(
