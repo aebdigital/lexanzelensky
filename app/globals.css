@@ -37,7 +37,7 @@ img {
 
 @layer components {
   .site-container {
-    @apply mx-auto w-[90vw] md:w-auto md:max-w-[95%] px-0 md:px-5;
+    @apply mx-auto w-[90vw] md:w-full md:max-w-[95%] px-0 md:px-5;
   }
 
   .content-block {
@@ -259,17 +259,18 @@ img {
 }
 
 .home-hero-text h1 {
-  max-width: 850px;
-  margin-bottom: 20px;
-  font-size: 4rem;
+  max-width: 700px;
+  margin-bottom: 15px;
+  font-size: 2.8rem;
   font-weight: 700;
   line-height: 1.1;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .home-hero-text p {
+  max-width: 600px;
   margin-bottom: 30px;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   opacity: 0.92;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
