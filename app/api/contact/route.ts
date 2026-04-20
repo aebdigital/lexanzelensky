@@ -39,13 +39,14 @@ export async function POST(request: Request) {
   const apiKey = process.env.SMTP2GO_API_KEY;
   const sender = process.env.SMTP2GO_SENDER;
 
-  let recipientString = process.env.CONTACT_FORM_RECIPIENT;
-  if (branchKey === "trnava" && process.env.CONTACT_TRNAVA) {
-    recipientString = process.env.CONTACT_TRNAVA;
-  } else if (branchKey === "senec" && process.env.CONTACT_SENEC) {
-    recipientString = process.env.CONTACT_SENEC;
-  } else if (branchKey === "piestany" && process.env.CONTACT_PIESTANY) {
-    recipientString = process.env.CONTACT_PIESTANY;
+  // Use the branch specific hardcoded email as destination
+  let recipientString = "zelenskystefan@gmail.com"; // Fallback to Trnava
+  if (branchKey === "trnava") {
+    recipientString = "zelenskystefan@gmail.com";
+  } else if (branchKey === "senec") {
+    recipientString = "zelenskysenec@gmail.com";
+  } else if (branchKey === "piestany") {
+    recipientString = "zelenskypiestany@gmail.com";
   }
 
   const recipients = text(recipientString)
@@ -58,7 +59,7 @@ export async function POST(request: Request) {
       {
         success: false,
         message:
-          "Kontaktný formulár nie je nakonfigurovaný. Skontrolujte email adresy pre pobočky, SMTP2GO_API_KEY a SMTP2GO_SENDER."
+          "Kontaktný formulár nie je nakonfigurovaný. Skontrolujte SMTP2GO_API_KEY a SMTP2GO_SENDER."
       },
       { status: 500 }
     );
