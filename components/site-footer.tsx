@@ -121,7 +121,7 @@ export function SiteFooter() {
                     </button>
                   </li>
                   <li>
-                    <button type="button" className="footer-link-button" onClick={() => { setCookieBannerOpen(false); setCookieModalOpen(true); }}>
+                    <button type="button" className="footer-link-button" onClick={() => setCookieModalOpen(true)}>
                       Nastavenie cookies
                     </button>
                   </li>
@@ -209,7 +209,7 @@ export function SiteFooter() {
               <button 
                 type="button" 
                 className="cookie-btn-settings" 
-                onClick={() => { setCookieBannerOpen(false); setCookieModalOpen(true); }}
+                onClick={() => setCookieModalOpen(true)}
               >
                 Nastavenia
               </button>
