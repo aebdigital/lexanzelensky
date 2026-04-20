@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "../../components/page-hero";
 import { ProductCardGrid } from "../../components/product-card-grid";
+import { legacyMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = {
-  title: "O nás",
-  description:
-    "Spoznajte LEXAN Zelenský s.r.o. - dlhoročné skúsenosti, kvalita materiálov a poradenstvo pri polykarbonátových riešeniach."
-};
+export const metadata: Metadata = legacyMetadata("about");
 
 export default function AboutPage() {
   return (
@@ -24,11 +21,13 @@ export default function AboutPage() {
                   Naša spoločnosť sa už viac ako <strong>23 rokov špecializuje</strong> na predaj a
                   distribúciu dutinkových a plných polykarbonátových dosiek značiek{" "}
                   <strong>LEXAN®</strong> a <strong>ARLA</strong>, ktoré patria medzi absolútnu
-                  svetovú špičku v oblasti výroby vysoko kvalitného polykarbonátu.
+                  svetovú špičku v oblasti výroby vysoko kvalitného polykarbonátu. Tieto značky sú
+                  známe svojou dlhodobou spoľahlivosťou, výnimočnou pevnosťou a obojstrannou UV
+                  ochranou, čím výrazne prevyšujú konkurenčné materiály na trhu.
                 </p>
                 <p>
                   K doskám ponúkame kompletné montážne príslušenstvo, čo nám umožňuje zabezpečiť
-                  zákazníkom všetko potrebné na jednom mieste efektívne, rýchlo a bez starostí.
+                  zákazníkom všetko potrebné na jednom mieste – efektívne, rýchlo a bez starostí.
                 </p>
               </div>
               <div className="content-image-box">
@@ -47,16 +46,19 @@ export default function AboutPage() {
                 <p>
                   Našim zákazníkom zároveň poskytujeme aj široký sortiment ďalších kvalitných
                   stavebných materiálov, čo nás radí medzi najkomplexnejších dodávateľov v tomto
-                  segmente.
+                  segmente. Veľký dôraz kladieme na dôslednú technickú podporu, osobný prístup a
+                  individuálne poradenstvo pri výbere vhodného riešenia – bez ohľadu na veľkosť
+                  zákazky.
                 </p>
                 <p>
-                  Veľký dôraz kladieme na dôslednú technickú podporu, osobný prístup a individuálne
-                  poradenstvo pri výbere vhodného riešenia bez ohľadu na veľkosť zákazky.
-                </p>
-                <p>
-                  Sme hrdí na to, že našim klientom dokážeme byť oporou v celom procese od
-                  plánovania projektu cez odbornú konzultáciu a prípravu materiálu až po samotnú
+                  Sme hrdí na to, že našim klientom dokážeme byť oporou v celom procese: od
+                  plánovania projektu, cez odbornú konzultáciu, prípravu materiálu, až po samotnú
                   realizáciu a montáž.
+                </p>
+                <p>
+                  Naša práca je založená na profesionalite, spoľahlivosti a dlhoročných
+                  skúsenostiach, vďaka čomu si udržiavame stabilné postavenie na trhu a dôveru
+                  širokého spektra zákazníkov – od jednotlivcov, živnostníkov až po stavebné firmy.
                 </p>
               </div>
             </div>
@@ -76,7 +78,10 @@ export default function AboutPage() {
                   <p>
                     Všetky polykarbonátové dosky dodávame výlučne od renomovaných značiek{" "}
                     <strong>LEXAN®</strong> a <strong>ARLA</strong>, ktoré predstavujú najvyššiu
-                    kvalitu v oblasti 100% polykarbonátu.
+                    kvalitu v oblasti 100% polykarbonátu. Vďaka obojstrannej UV stabilizácii a
+                    výnimočnej mechanickej pevnosti sú ideálnou voľbou pre exteriérové aplikácie –
+                    od prístreškov a altánkov, skleníky-lexaníky, cez svetlíky až po zimné záhrady.
+                    Technické certifikáty a vyhlásenia o zhode sú k dispozícii na vyžiadanie.
                   </p>
                 </div>
               </div>
@@ -95,13 +100,14 @@ export default function AboutPage() {
               <div className="content-text">
                 <h3 className="content-title-dark">Odborná montáž</h3>
                 <p>
-                  Okrem dodávky materiálu poskytujeme aj <strong>odbornú montáž</strong>
-                  dutinkových a plných polykarbonátových dosiek na už hotové konštrukcie.
+                  Okrem dodávky materiálu poskytujeme aj{" "}
+                  <strong>odbornú montáž dutinkových a plných polykarbonátových dosiek</strong>{" "}
+                  značky LEXAN® a ARLA na už hotové konštrukcie.
                 </p>
                 <p>
                   Zabezpečuje ju náš skúsený tím technikov, prípadne spolupracujeme s overenými
-                  zámočníkmi a stolármi pri výrobe a montáži prístreškov, zimných záhrad, balkónov
-                  a skleníkov.
+                  zámočníkmi a stolármi pri výrobe a montáži prístreškov, zimných záhrad, balkónov,
+                  skleníkov-lexaníkov či iných stavieb.
                 </p>
               </div>
             </div>
@@ -114,14 +120,25 @@ export default function AboutPage() {
                   <Link href="/kontakt" className="font-semibold text-[#5a5a58] no-underline">
                     kde vám radi poskytneme osobné odborné poradenstvo
                   </Link>{" "}
-                  a cenovú ponuku na mieru zdarma.
+                  a cenovú ponuku na mieru zdarma, alebo si u nás môžete vyzdvihnúť materiál priamo
+                  na mieste.
                 </p>
                 <div className="delivery-info-box">
                   <p>
-                    Výhodnú dopravu zabezpečujeme po celom Slovensku, najmä v okolí Trnavy, Senca,
-                    Piešťan, Bratislavy, Hlohovca, Serede, Galanty, Senice, Skalice, Malaciek,
-                    Nitry, Pezinka, Modry, Dunajskej Stredy, Nových Zámkov, Nového Mesta nad Váhom
-                    a Trenčína.
+                    🚚 Výhodná doprava po celom Slovensku
+                  </p>
+                  <p>
+                    Pre ešte väčší komfort našich zákazníkov ponúkame aj výhodnú dopravu zakúpeného
+                    materiálu kamkoľvek na Slovensku, najmä v okolí uvedených miest:
+                  </p>
+                  <p>
+                    Trnava, Senec, Piešťany, Bratislava, Hlohovec, Sereď, Galanta, Senica, Skalica,
+                    Malacky, Nitra, Pezinok, Modra, Dunajská Streda, Nové Zámky, Nové Mesto nad
+                    Váhom a Trenčín.
+                  </p>
+                  <p>
+                    Doprava je zabezpečovaná našim vozidlom promptne, spoľahlivo a za rozumné ceny,
+                    aby ste svoj materiál mali vždy včas tam, kde ho potrebujete.
                   </p>
                 </div>
               </div>
@@ -133,7 +150,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="cta-row">
+            <div className="cta-row cta-row-centered">
               <Link href="/kontakt" className="footer-button">
                 Kontaktovať nás
               </Link>

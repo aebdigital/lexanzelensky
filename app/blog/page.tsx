@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "../../components/page-hero";
+import { legacyMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description: "Novinky a praktické tipy k polykarbonátovým riešeniam pripravujeme."
-};
+export const metadata: Metadata = legacyMetadata("blog");
 
 export default function BlogPage() {
   return (
@@ -15,18 +13,16 @@ export default function BlogPage() {
         <div className="site-container">
           <div className="content-text max-w-3xl">
             <h2 className="content-title-dark">
-              Praktické články, porovnania materiálov a montážne odporúčania pripravujeme.
+              Pripravujeme obsah
             </h2>
             <p>
-              Zatiaľ nás môžete kontaktovať priamo a radi vám poradíme individuálne podľa projektu,
-              materiálu a požadovaného výsledku.
+              Blog je momentálne v príprave. Čoskoro tu nájdete užitočné informácie o
+              polykarbonátových riešeniach, tipoch na montáž skleníkov a novinky z oblasti
+              stavebných materiálov.
             </p>
             <div className="cta-row">
-              <Link href="/kontakt" className="footer-button">
-                Napísať nám
-              </Link>
-              <Link href="/produkty" className="footer-button">
-                Pozrieť produkty
+              <Link href="/" className="footer-button">
+                Návrat na hlavnú stránku
               </Link>
             </div>
           </div>

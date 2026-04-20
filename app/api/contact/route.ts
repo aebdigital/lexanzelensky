@@ -1,27 +1,68 @@
-function getField(formData: FormData, fieldName: string) {
-  return `${formData.get(fieldName) ?? ""}`.trim();
+function text(value: unknown) {
+  return `${value ?? ""}`.trim();
 }
 
+function isValidEmail(value: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+type ContactFile = {
+  filename?: unknown;
+  mimetype?: unknown;
+  content?: unknown;
+};
+
 export async function POST(request: Request) {
-  const formData = await request.formData();
+  const apiKey = process.env.SMTP2GO_API_KEY;
+  const sender = process.env.SMTP2GO_SENDER;
+  const recipients = text(process.env.CONTACT_FORM_RECIPIENT)
+    .split(",")
+    .map((recipient) => recipient.trim())
+    .filter(Boolean);
 
-  const branch = getField(formData, "branch");
-  const requirements = getField(formData, "requirements");
-  const customerName = getField(formData, "customer-name");
-  const customerEmail = getField(formData, "customer-email");
-
-  if (!branch || !requirements || !customerName || !customerEmail) {
+  if (!apiKey || !sender || recipients.length === 0) {
     return Response.json(
       {
         success: false,
-        message: "Vyplňte všetky povinné polia formulára."
+        message:
+          "Kontaktný formulár nie je nakonfigurovaný. Skontrolujte CONTACT_FORM_RECIPIENT, SMTP2GO_API_KEY a SMTP2GO_SENDER."
+      },
+      { status: 500 }
+    );
+  }
+
+  let payload: Record<string, unknown>;
+  try {
+    payload = await request.json();
+  } catch (error) {
+    return Response.json(
+      {
+        success: false,
+        message: "Neplatný formát požiadavky."
+      },
+      { status: 400 }
+    );
+  }
+  const name = text(payload.name);
+  const email = text(payload.email);
+  const message = text(payload.message);
+  const phone = text(payload.phone);
+  const subject = text(payload.subject) || "Kontaktný formulár LEXAN";
+  const branchLabel = text(payload.branchLabel);
+  const branchEmail = text(payload.branchEmail);
+  const files: ContactFile[] = Array.isArray(payload.files) ? payload.files : [];
+
+  if (!name || !email || !message) {
+    return Response.json(
+      {
+        success: false,
+        message: "Vyplňte meno, email a opis požiadaviek."
       },
       { status: 400 }
     );
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(customerEmail)) {
+  if (!isValidEmail(email)) {
     return Response.json(
       {
         success: false,
@@ -31,12 +72,73 @@ export async function POST(request: Request) {
     );
   }
 
-  return Response.json(
-    {
-      success: false,
-      message:
-        "Frontend formulára je pripravený, ale odosielanie emailov treba ešte pripojiť na SMTP alebo inú mail službu."
+  const attachments = files
+    .filter((file) => file && file.filename && file.content)
+    .map((file) => ({
+      filename: text(file.filename),
+      mimetype: text(file.mimetype) || "application/octet-stream",
+      fileblob: text(file.content)
+    }));
+
+  const textBody = [
+    `Meno: ${name}`,
+    `Email: ${email}`,
+    phone ? `Telefón: ${phone}` : "",
+    branchLabel ? `Pobočka: ${branchLabel}` : "",
+    branchEmail ? `Email pobočky: ${branchEmail}` : "",
+    "",
+    "Správa:",
+    message
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  const htmlBody = `
+    <h2>Nová požiadavka z webu LEXAN</h2>
+    <p><strong>Meno:</strong> ${name}</p>
+    <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+    ${phone ? `<p><strong>Telefón:</strong> ${phone}</p>` : ""}
+    ${branchLabel ? `<p><strong>Pobočka:</strong> ${branchLabel}</p>` : ""}
+    ${branchEmail ? `<p><strong>Email pobočky:</strong> ${branchEmail}</p>` : ""}
+    <hr>
+    <p><strong>Správa:</strong></p>
+    <p>${message.replace(/\n/g, "<br>")}</p>
+  `;
+
+  const response = await fetch("https://api.smtp2go.com/v3/email/send", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
     },
-    { status: 501 }
-  );
+    body: JSON.stringify({
+      api_key: apiKey,
+      sender,
+      to: recipients,
+      subject: `[LEXAN] ${subject}`,
+      text_body: textBody,
+      html_body: htmlBody,
+      reply_to: email,
+      attachments
+    })
+  });
+
+  const result = await response.json();
+  const failed = result?.data?.failed ?? 0;
+  const succeeded = result?.data?.succeeded ?? 0;
+
+  if (!response.ok || failed > 0 || succeeded === 0) {
+    return Response.json(
+      {
+        success: false,
+        message: "Email sa nepodarilo odoslať cez SMTP2GO.",
+        details: result
+      },
+      { status: 502 }
+    );
+  }
+
+  return Response.json({
+    success: true,
+    message: "Ďakujeme, vaša požiadavka bola úspešne odoslaná."
+  });
 }

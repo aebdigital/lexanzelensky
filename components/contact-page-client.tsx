@@ -8,6 +8,31 @@ type SubmissionState = {
   message: string;
 };
 
+type EncodedFile = {
+  filename: string;
+  mimetype: string;
+  content: string;
+};
+
+const netlifyContactEndpoint = "/.netlify/functions/contact";
+
+function fileToBase64(file: File) {
+  return new Promise<EncodedFile>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error(`Nepodarilo sa načítať súbor ${file.name}.`));
+    reader.onload = () => {
+      const value = `${reader.result ?? ""}`;
+      const content = value.includes(",") ? value.split(",")[1] : value;
+      resolve({
+        filename: file.name,
+        mimetype: file.type || "application/octet-stream",
+        content
+      });
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
 export function ContactPageClient() {
   const [selectedBranch, setSelectedBranch] = useState<Branch>(branches[0]);
   const [files, setFiles] = useState<File[]>([]);
@@ -25,23 +50,52 @@ export function ContactPageClient() {
 
     const formElement = event.currentTarget;
     const formData = new FormData(formElement);
-    formData.set("branch", selectedBranch.key);
-    formData.delete("files[]");
-    files.forEach((file) => formData.append("files[]", file));
 
     try {
-      const response = await fetch("/api/contact", {
+      const oversizedFile = files.find((file) => file.size > 10 * 1024 * 1024);
+      if (oversizedFile) {
+        throw new Error(`Súbor "${oversizedFile.name}" je príliš veľký. Maximálna veľkosť je 10MB.`);
+      }
+
+      const encodedFiles = await Promise.all(files.map(fileToBase64));
+      const requestPayload = {
+        branch: selectedBranch.key,
+        branchLabel: `LEXAN ${selectedBranch.city}`,
+        branchEmail: selectedBranch.email,
+        name: `${formData.get("customer-name") ?? ""}`.trim(),
+        email: `${formData.get("customer-email") ?? ""}`.trim(),
+        phone: `${formData.get("customer-phone") ?? ""}`.trim(),
+        subject: `${formData.get("subject") ?? ""}`.trim(),
+        message: `${formData.get("requirements") ?? ""}`.trim(),
+        files: encodedFiles
+      };
+
+      let response = await fetch(netlifyContactEndpoint, {
         method: "POST",
-        body: formData
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(requestPayload)
       });
-      const payload = (await response.json()) as { success: boolean; message: string };
+
+      const contentType = response.headers.get("content-type") ?? "";
+      if (response.status === 404 || !contentType.includes("application/json")) {
+        response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(requestPayload)
+        });
+      }
+      const responsePayload = (await response.json()) as { success: boolean; message: string };
 
       setSubmission({
-        kind: payload.success ? "success" : "error",
-        message: payload.message
+        kind: responsePayload.success ? "success" : "error",
+        message: responsePayload.message
       });
 
-      if (payload.success) {
+      if (responsePayload.success) {
         formElement.reset();
         setFiles([]);
       }
@@ -69,10 +123,31 @@ export function ContactPageClient() {
                   onClick={() => setSelectedBranch(branch)}
                   className={active ? "location-card is-selected" : "location-card"}
                 >
-                  <h3 className="mb-3 text-2xl font-semibold text-[#333]">{branch.city}</h3>
-                  <p className="mb-2 text-[#666]">{branch.address}</p>
-                  <p className="mb-2 text-[#666]">{branch.phone}</p>
-                  <p className="text-[#666]">{branch.email}</p>
+                  <span className="active-indicator">
+                    <span />
+                  </span>
+                  <span className="location-card-content">
+                    <span className="location-icon" aria-hidden>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong className="mb-3 block text-2xl font-semibold text-[#333]">
+                        {branch.city}
+                      </strong>
+                      <span className="mb-2 block text-[#666]">{branch.address}</span>
+                      <span className="mb-2 block font-semibold text-[#5a5a58]">{branch.phone}</span>
+                      <span className="block text-[#666]">{branch.email}</span>
+                    </span>
+                  </span>
                 </button>
               );
             })}
@@ -83,75 +158,85 @@ export function ContactPageClient() {
       <section className="page-copy-section">
         <div className="site-container">
           <div className="contact-form-map-grid">
-            <div className="contact-map">
-              <iframe
-                title={`Mapa pobočky ${selectedBranch.city}`}
-                src={selectedBranch.mapUrl}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-
-            <div className="contact-form-wrapper">
-              <h2>Napíšte nám</h2>
-              <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="contact-form-wrapper contact-form-side">
+              <h2>Zaujala vás naša ponuka?</h2>
+              <p className="mb-8 text-[1.1rem] leading-7 text-[#666]">
+                Kontaktujte nás ešte dnes pre cenovú ponuku na mieru alebo si vyžiadajte vzorku.
+              </p>
+              <form className="contact-form" id="enhanced-contact-form" onSubmit={handleSubmit}>
                 <label>
                   Vyberte pobočku, ktorú chcete kontaktovať *
                   <select
+                    id="branch"
                     name="branch"
                     value={selectedBranch.key}
+                    required
                     onChange={(event) =>
                       setSelectedBranch(
                         branches.find((branch) => branch.key === event.target.value) ?? branches[0]
                       )
                     }
                   >
+                    <option value="">-- Vyberte pobočku --</option>
                     {branches.map((branch) => (
                       <option key={branch.key} value={branch.key}>
-                        {branch.city}
+                        LEXAN {branch.city}
                       </option>
                     ))}
                   </select>
+                  <span id="branch-email-display" className="branch-email-display">
+                    Správa bude odoslaná na: {selectedBranch.email}
+                  </span>
                 </label>
+
+                <label>
+                  Stručný opis vašich požiadaviek *
+                  <textarea
+                    required
+                    id="requirements"
+                    name="requirements"
+                  />
+                  <span className="text-sm font-normal text-[#666]">
+                    Napríklad: "Potrebujem dutinkové polykarbonáty pre skleník 6x4m, hrúbka 10mm,
+                    transparentné, včítane montážneho príslušenstva"
+                  </span>
+                </label>
+
+                <h3 className="contact-form-subtitle">Vaše kontaktné údaje *</h3>
 
                 <div className="form-grid">
                   <label>
                     Meno a priezvisko *
-                    <input required name="customer-name" />
+                    <input required id="customer-name" name="customer-name" />
                   </label>
                   <label>
                     Email *
-                    <input required type="email" name="customer-email" />
-                  </label>
-                  <label>
-                    Telefón
-                    <input name="customer-phone" />
-                  </label>
-                  <label>
-                    Predmet
-                    <input name="subject" />
+                    <input required id="customer-email" type="email" name="customer-email" />
                   </label>
                 </div>
 
                 <label>
-                  Opis požiadaviek *
-                  <textarea
-                    required
-                    name="requirements"
-                    placeholder="Typ materiálu, rozmery, farba, účel použitia, termín realizácie..."
-                  />
+                  Telefónne číslo
+                  <input id="customer-phone" name="customer-phone" placeholder="+421 XXX XXX XXX" />
                 </label>
 
                 <label>
-                  Prílohy
+                  Nahrávanie súborov a fotiek
                   <div className="file-upload-box">
                     <input
                       type="file"
+                      id="file-upload"
                       name="files[]"
                       multiple
                       accept=".jpg,.jpeg,.png,.pdf,.dwg,.doc,.docx"
                       onChange={handleFileChange}
                     />
+                    <strong>Kliknite pre nahranie súborov</strong>
+                    <p className="mt-3 text-sm text-[#666]">
+                      Nákresy, fotografie, technické špecifikácie
+                      <br />
+                      Maximálne 10MB na súbor | JPG, PNG, PDF, DWG
+                    </p>
                     {files.length > 0 ? (
                       <div className="file-chip-row">
                         {files.map((file) => (
@@ -160,11 +245,7 @@ export function ContactPageClient() {
                           </span>
                         ))}
                       </div>
-                    ) : (
-                      <p className="mt-3 text-sm text-[#666]">
-                        Môžete priložiť nákresy, fotky alebo technické podklady.
-                      </p>
-                    )}
+                    ) : null}
                   </div>
                 </label>
 
@@ -180,19 +261,48 @@ export function ContactPageClient() {
                   </div>
                 ) : null}
 
-                <div className="cta-row">
-                  <button
-                    type="submit"
-                    disabled={sending}
-                    className="footer-button disabled:cursor-not-allowed disabled:opacity-60"
-                  >
-                    {sending ? "Odosiela sa..." : "Odoslať formulár"}
-                  </button>
-                  <a href={`mailto:${selectedBranch.email}`} className="legacy-button-dark">
-                    Napísať priamo na {selectedBranch.city}
-                  </a>
-                </div>
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="contact-submit-btn disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {sending ? "Odosiela sa..." : "Odoslať požiadavku"}
+                </button>
               </form>
+            </div>
+
+            <div className="map-side">
+              <h2>Mapa pobočiek</h2>
+              <div className="contact-map">
+              <iframe
+                title={`Mapa pobočky ${selectedBranch.city}`}
+                src={selectedBranch.mapUrl}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+                <div className="location-overlay">
+                  <h4>{selectedBranch.city}</h4>
+                  <p>
+                    <strong>Adresa:</strong> {selectedBranch.address}
+                  </p>
+                  <p>
+                    <strong>Tel:</strong>{" "}
+                    <a href={`tel:${selectedBranch.phone.replace(/\s+/g, "")}`}>
+                      {selectedBranch.phone}
+                    </a>
+                  </p>
+                  <p>
+                    <strong>Email:</strong> <a href={`mailto:${selectedBranch.email}`}>{selectedBranch.email}</a>
+                  </p>
+                  <p>
+                    <strong>Otváracie hodiny:</strong>
+                    <br />
+                    Pondelok – Piatok: 8:00 – 16:00
+                    <br />
+                    Sobota – Nedeľa: zatvorené
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

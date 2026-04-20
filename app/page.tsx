@@ -3,12 +3,9 @@ import Link from "next/link";
 import { HomeHero } from "../components/home-hero";
 import { ProductCardGrid } from "../components/product-card-grid";
 import { partnerLogos } from "../lib/site-data";
+import { legacyMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Domov",
-  description:
-    "LEXAN Zelenský s.r.o. - polykarbonátové riešenia, HPL dosky, skleníky, trapézy a príslušenstvo."
-};
+export const metadata: Metadata = legacyMetadata("home");
 
 export default function HomePage() {
   return (
@@ -26,12 +23,17 @@ export default function HomePage() {
                 <p>
                   Naša firma má viac ako 23 ročnú skúsenosť s predajom, distribúciou a montážou
                   kvalitných polykarbonátových platní registrovanej ochrannej značky LEXAN® a
-                  ARLA.
+                  ARLA, ktoré patria medzi absolútnu svetovú špičku v oblasti výroby vysoko
+                  kvalitného polykarbonátu. Na našej stránke nájdete široký výber dutinkových,
+                  plných, vlnovkových a trapézových polykarbonátov, montážne hliníkové a plastové
+                  komponenty. Ponúkame kvalitné a ľahké záhradné polykarbonátové skleníky-lexaníky
+                  vyrábané na mieru zákazníka.
                 </p>
                 <p>
-                  Na našej stránke nájdete široký výber dutinkových, plných, vlnovkových a
-                  trapézových polykarbonátov, montážne hliníkové a plastové komponenty aj kvalitné
-                  záhradné skleníky vyrábané na mieru zákazníka.
+                  Okrem Lexanu ponúkame kompaktné vysokotlakové HPL dosky Fundermax, Kronospan a
+                  Kompozitné sendvičové panely Bond. Zakladáme si predovšetkým hlavne na kvalite
+                  produktov, profesionalite a spokojnosti zákazníkov. Poskytujeme odborné
+                  poradenstvo od plánovania až po samotnú realizáciu stavieb.
                 </p>
                 <Link href="/kontakt" className="legacy-button-dark">
                   Kontaktovať nás
@@ -51,7 +53,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ProductCardGrid title="Naše produkty" />
+      <ProductCardGrid title="Naše produkty" variant="home" />
 
       <section className="partners-section">
         <div className="site-container">

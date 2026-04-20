@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { ContactPageClient } from "../../components/contact-page-client";
+import { legacyMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Kontakt",
-  description:
-    "Kontaktujte pobočky LEXAN v Trnave, Senci a Piešťanoch a pošlite dopyt k materiálu alebo projektu."
-};
+export const metadata: Metadata = legacyMetadata("contact");
 
 export default function ContactPage() {
   return (

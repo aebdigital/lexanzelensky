@@ -1,0 +1,29 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/o-nas.html"
+  to = "/o-nas"
+  status = 301
+
+[[redirects]]
+  from = "/produkty.html"
+  to = "/produkty"
+  status = 301
+
+[[redirects]]
+  from = "/sluzby.html"
+  to = "/sluzby"
+  status = 301
+
+[[redirects]]
+  from = "/kontakt.html"
+  to = "/kontakt"
+  status = 301
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
+  status = 301

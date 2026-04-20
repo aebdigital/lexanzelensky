@@ -1,21 +1,39 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { PageHero } from "../../components/page-hero";
-import { ProductBrowser } from "../../components/product-browser";
+import { ProductCardGrid } from "../../components/product-card-grid";
+import { legacyMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Produkty",
-  description:
-    "Prehľad polykarbonátových produktov, HPL dosiek, montážneho príslušenstva, trapézov a skleníkov."
+export const metadata: Metadata = legacyMetadata("products");
+
+type Props = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export default function ProductsPage() {
+export default async function ProductsPage({ searchParams }: Props) {
+  const params = await searchParams;
+  /* Backwards-compatible redirect: old ?service= links → new /produkty/[slug] */
+  const service = params.service;
+  const category = params.category;
+  const slug = typeof service === "string" ? service : typeof category === "string" ? category : null;
+
+  const validSlugs = [
+    "dutinkove-polykarbonaty",
+    "plne-polykarbonaty",
+    "hpl-bond-dosky",
+    "prislusenstvo",
+    "trapezy-vlnovky",
+    "skleniky"
+  ];
+
+  if (slug && validSlugs.includes(slug)) {
+    redirect(`/produkty/${slug}`);
+  }
+
   return (
     <main>
       <PageHero title="Produkty" />
-      <Suspense fallback={<div className="site-container py-20">Načítavam produktový prehľad...</div>}>
-        <ProductBrowser />
-      </Suspense>
+      <ProductCardGrid title="Naše produkty" variant="standard" />
     </main>
   );
 }

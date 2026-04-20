@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
+import { localBusinessJsonLd } from "../lib/seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lexanzelensky.sk"),
@@ -14,6 +15,10 @@ export const metadata: Metadata = {
     "Polykarbonátové riešenia, HPL dosky, trapézy, skleníky a príslušenstvo s poradenstvom a dopravou po Slovensku.",
   icons: {
     icon: "/lexan_favicon.png"
+  },
+  robots: {
+    index: true,
+    follow: true
   }
 };
 
@@ -30,6 +35,11 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
+        />
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
       </head>
       <body>
