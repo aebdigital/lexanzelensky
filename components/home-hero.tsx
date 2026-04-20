@@ -19,11 +19,15 @@ export function HomeHero() {
     <section className="home-hero">
       <div className="home-hero-background">
         {homeHeroImages.map((image, index) => (
-          <img
+          <div
             key={image}
-            src={image}
-            alt="LEXAN hero"
             className={index === activeIndex ? "home-hero-image active" : "home-hero-image"}
+            style={{ 
+              backgroundImage: `url('${image}')`, 
+              backgroundSize: 'cover', 
+              backgroundPosition: 'center', 
+              backgroundAttachment: 'fixed' 
+            }}
           />
         ))}
       </div>
