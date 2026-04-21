@@ -1844,6 +1844,10 @@ img {
   .product-gallery-grid {
     grid-template-columns: 1fr;
   }
+
+  .content-image-box {
+    height: 250px;
+  }
 }
 
 /* COOKIE MANAGEMENT SYSTEM */
