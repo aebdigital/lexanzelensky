@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "../../components/page-hero";
 import { ProductCardGrid } from "../../components/product-card-grid";
 import { legacyMetadata } from "../../lib/seo";
@@ -41,10 +42,12 @@ export default function ServicesPage() {
                   </p>
                 </div>
               </div>
-              <div className="content-image-box">
-                <img
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image
                   src="/sources/1.Dutinkove-polykarbonaty/Fotka-za-nazvom.jpg"
                   alt="Predaj a distribúcia materiálu"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -58,10 +61,12 @@ export default function ServicesPage() {
         <div className="site-container">
           <div className="content-section-stack">
             <div className="about-split-grid">
-              <div className="content-image-box">
-                <img
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image
                   src="/sources/3.HPL-dosky/obrazok-za-hlavnym-nadpisom.jpg"
                   alt="Odborné poradenstvo"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="content-text">
@@ -107,17 +112,24 @@ export default function ServicesPage() {
                   <span aria-hidden>→</span>
                 </a>
               </div>
-              <div className="content-image-box">
-                <img
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image
                   src="/sources/4.Prislusenstvo/Fotka-za-hlavnym-nadpisom.jpeg"
                   alt="Montáž a výroba na mieru"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
 
             <div className="about-split-grid">
-              <div className="content-image-box">
-                <img src="/sources/5.Trapezy-a-Vlnovky/fotka-za-hlavny-nadpis.jpg" alt="Doprava" />
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image 
+                  src="/sources/5.Trapezy-a-Vlnovky/fotka-za-hlavny-nadpis.jpg" 
+                  alt="Doprava" 
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="content-text">
                 <h3 className="content-title-dark">Doprava</h3>
