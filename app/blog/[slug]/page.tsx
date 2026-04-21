@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { supabase } from "../../../lib/supabase";
 import { PageHero } from "../../../components/page-hero";
 import Link from "next/link";
@@ -65,7 +66,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="bg-white shadow-xl shadow-gray-200/40 border border-gray-100 overflow-hidden">
             {post.cover_image && (
               <div className="relative h-[250px] md:h-[400px] w-full bg-gray-100">
-                <img src={post.cover_image} alt={post.title} className="absolute inset-0 w-full h-full object-cover" />
+                <Image src={post.cover_image} alt={post.title} fill className="object-cover" />
               </div>
             )}
             

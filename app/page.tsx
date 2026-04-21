@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { HomeHero } from "../components/home-hero";
 import { ProductCardGrid } from "../components/product-card-grid";
 import { partnerLogos } from "../lib/site-data";
@@ -43,8 +44,15 @@ export default function HomePage() {
             </div>
 
             <div className="home-about-visual">
-              <img src="/sources/new.jpg" alt="LEXAN polykarbonátové riešenia" />
-              <div className="floating-stat-box">
+              <div className="relative w-full h-[300px] md:h-[500px]">
+                <Image 
+                  src="/sources/about-quality.jpg" 
+                  alt="LEXAN polykarbonátové riešenia" 
+                  fill 
+                  className="object-cover" 
+                />
+              </div>
+              <div className="floating-stat-box z-10">
                 <div className="floating-stat-number">23</div>
                 <div className="floating-stat-label">rokov skúseností</div>
               </div>
@@ -58,16 +66,22 @@ export default function HomePage() {
       <section className="partners-section">
         <div className="site-container">
           <h2 className="section-title-center mb-8">Naši partneri</h2>
-          <div className="partners-grid">
+          <div className="partners-grid justify-items-center">
             {partnerLogos.map((partner) => (
               <a
                 key={partner.name}
                 href={partner.href}
                 target="_blank"
                 rel="noreferrer"
-                className="partner-card"
+                className="partner-card flex items-center justify-center p-4 hover:-translate-y-1 transition-transform"
               >
-                <img src={partner.image} alt={partner.name} />
+                <Image 
+                  src={partner.image} 
+                  alt={partner.name} 
+                  width={200} 
+                  height={80} 
+                  style={{ width: 'auto', maxHeight: '80px', objectFit: 'contain' }}
+                />
               </a>
             ))}
           </div>

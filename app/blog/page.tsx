@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "../../components/page-hero";
 import { legacyMetadata } from "../../lib/seo";
 import { supabase } from "../../lib/supabase";
@@ -40,7 +41,7 @@ export default async function BlogPage() {
                 <Link key={post.id} href={`/blog/${post.slug}`} className="group flex flex-col bg-white border border-gray-100 hover:-translate-y-1 transition-all overflow-hidden shadow-sm hover:shadow-xl">
                   {post.cover_image && (
                     <div className="relative h-56 overflow-hidden bg-gray-100 border-b border-gray-100">
-                      <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <Image src={post.cover_image} alt={post.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                   )}
                   <div className="p-8 flex flex-col flex-grow">
