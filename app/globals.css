@@ -215,6 +215,12 @@ img {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: 480px;
+  }
+}
+
 .home-hero-background,
 .home-hero-overlay {
   position: absolute;
@@ -1738,8 +1744,15 @@ img {
   }
 
   .home-hero-text h1 {
-    font-size: 2.7rem;
-    letter-spacing: 2px;
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  .home-hero-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
   }
 
   .page-hero h1,
