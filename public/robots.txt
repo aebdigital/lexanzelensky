@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://lexanzelensky.sk/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow access to admin areas (if any)
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /*.log$
+
+# Allow all images
+Allow: /sources/
+Allow: /partneri/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.webp
+
+# Company: LEXAN Zelenský s.r.o.
+# Contact: zelenskystefan@gmail.com
