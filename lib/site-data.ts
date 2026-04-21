@@ -369,13 +369,13 @@ export const products: ProductCategory[] = [
         title: "Hliníkové profily",
         text: ["Obrázok / Názov profilu / Dostupná farba / Dostupné rozmery (m)"],
         list: [
-          "Prítlačná lišta 60mm / Bez povrchovej úpravy, bronz elox, antracit šedý / 2, 3, 3,5, 4, 5, 7",
-          "Prítlačná lišta 50mm / Bez povrchovej úpravy / 2, 3, 3,5, 4, 5, 7",
+          "Prítlačná lišta 60mm / Bez povrchovej úpravy, bronz elox, antracit šedý / 2, 3, 3.5, 4, 5, 6, 7",
+          "Prítlačná lišta 50mm / Bez povrchovej úpravy / 2, 3, 3.5, 4, 5, 6, 7",
           "H profil 10mm a 16mm / Bez povrchovej úpravy / 2, 3, 6",
-          "F Profil 6, 8, 10, 16mm / Bez povrchovej úpravy, bronz elox, antracit šedý / 2,133, 3,20, 4,266, 6,40",
+          "F Profil 6, 8, 10, 16mm / Bez povrchovej úpravy, bronz elox, antracit šedý / 2.133, 3.20, 4.266, 6.40",
           "U profil 6, 8 mm / Bez povrchovej úpravy / 2, 3, 6",
-          "U profil 10, 16mm / Strieborný elox, bronz elox / 2,133, 3,20, 4,266, 6,40",
-          "Nástenný S Profil / Bez povrchovej úpravy, bronz elox, antracit šedý / 2,133, 3,20, 4,266, 6,40",
+          "U profil 10, 16mm / Strieborný elox, bronz elox / 2.133, 3.20, 4.266, 6.40",
+          "Nástenný S Profil / Bez povrchovej úpravy, bronz elox, antracit šedý / 2.133, 3.20, 4.266, 6.40",
           "L Profil 15x15, 20x20, 25x25, 30x30, 40x20, 40x40 / Bez povrchovej úpravy / 2, 3, 6",
           "Pásovina 30 a 40mm / Bez povrchovej úpravy / 2, 3, 6"
         ]
@@ -384,7 +384,7 @@ export const products: ProductCategory[] = [
         title: "Plastové polykarbonátové profily",
         text: ["Obrázok / Názov profilu / Dostupné rozmery (m)"],
         list: [
-          "U profil PC 4,6,8,10 a 16mm / 2,1m",
+          "U profil PC 4, 6, 8, 10 a 16mm / 2.1m",
           "H profil PC 4,6,8,10 a 16mm (Pri 10 a 16mm verziách sú profily dostupné aj v prevedení hnedý bronz) / 2, 3, 4 a 6"
         ]
       },
@@ -406,8 +406,8 @@ export const products: ProductCategory[] = [
         list: [
           "Vrut do dreva / 40, 50, 60 a 70mm",
           "Tex samorezný / 25, 32, 38, 45, 50 a 60mm",
-          "Podložka malá a veľká / -",
-          "Podložka nerezová / -",
+          "Podložka malá a veľká / 6.3 x 19mm a 6.3 x 25mm",
+          "Podložka nerezová / 6.3 x 25mm",
           "Silikón Sikacil C 300ml / 300ml",
           "FIX Lepidlo 290ml, transparent / 290ml"
         ]

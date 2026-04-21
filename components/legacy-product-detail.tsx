@@ -32,13 +32,13 @@ const accessoryTabs: {
     tabImage: "/sources/4.Prislusenstvo/hlinikove-profily.png",
     headers: ["Obrázok", "Názov profilu", "Dostupná farba", "Dostupné rozmery (m)"],
     rows: [
-      { image: "/sources/4.Prislusenstvo/obrazok-1.png", cells: ["Prítlačná lišta 60mm", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2, 3, 3,5, 4, 5, 6, 7"] },
-      { image: "/sources/4.Prislusenstvo/obrazok-4.png", cells: ["Prítlačná lišta 50mm", "Bez povrchovej úpravy", "2, 3, 3,5, 4, 5, 6, 7"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-1.png", cells: ["Prítlačná lišta 60mm", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2, 3, 3.5, 4, 5, 6, 7"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-4.png", cells: ["Prítlačná lišta 50mm", "Bez povrchovej úpravy", "2, 3, 3.5, 4, 5, 6, 7"] },
       { image: "/sources/4.Prislusenstvo/obrazok-5.jpg", cells: ["H profil 10mm a 16mm", "Bez povrchovej úpravy", "2, 3, 6"] },
-      { image: "/sources/4.Prislusenstvo/obrazok-6.jpg", cells: ["F Profil 6, 8, 10, 16mm", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2,133, 3,20, 4,266, 6,40"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-6.jpg", cells: ["F Profil 6, 8, 10, 16mm", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2.133, 3.20, 4.266, 6.40"] },
       { image: "/sources/4.Prislusenstvo/obrazok-9.jpg", cells: ["U profil 6, 8 mm", "Bez povrchovej úpravy", "2, 3, 6"] },
-      { image: "/sources/4.Prislusenstvo/obrazok-10.jpg", cells: ["U profil 10, 16mm", "Strieborný elox, bronz elox", "2,133, 3,20, 4,266, 6,40"] },
-      { image: "/sources/4.Prislusenstvo/obrazok-12.jpg", cells: ["Nástenný S Profil", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2,133, 3,20, 4,266, 6,40"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-10.jpg", cells: ["U profil 10, 16mm", "Strieborný elox, bronz elox", "2.133, 3.20, 4.266, 6.40"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-12.jpg", cells: ["Nástenný S Profil", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2.133, 3.20, 4.266, 6.40"] },
       { image: "/sources/4.Prislusenstvo/obrazok-14.jpg", cells: ["L Profil 15x15, 20x20, 25x25, 30x30, 40x20, 40x40", "Bez povrchovej úpravy", "2, 3, 6"] },
       { image: "/sources/4.Prislusenstvo/obrazok-16.jpg", cells: ["Pásovina 30 a 40mm", "Bez povrchovej úpravy", "2, 3, 6"] }
     ]
@@ -50,7 +50,7 @@ const accessoryTabs: {
     tabImage: "/sources/4.Prislusenstvo/plastove-polykarbonatove-profily.jpg",
     headers: ["Obrázok", "Názov profilu", "Dostupné rozmery (m)"],
     rows: [
-      { image: "/sources/4.Prislusenstvo/obrazok-17.png", cells: ["U profil PC 4,6,8,10 a 16mm", "2,1m"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-17.png", cells: ["U profil PC 4,6,8,10 a 16mm", "2.1m"] },
       { image: "/sources/4.Prislusenstvo/obrazok-18.png", cells: ["H profil PC 4,6,8,10 a 16mm (Pri 10 a 16mm verziách sú profily dostupné aj v prevedení hnedý bronz)", "2, 3, 4 a 6"] }
     ]
   },
@@ -78,8 +78,8 @@ const accessoryTabs: {
     rows: [
       { image: "/sources/4.Prislusenstvo/obrazok-23.jpg", cells: ["Vrut do dreva", "40, 50, 60 a 70mm"] },
       { image: "/sources/4.Prislusenstvo/obrazok-24.jpg", cells: ["Tex samorezný", "25, 32, 38, 45, 50 a 60mm"] },
-      { image: "/sources/4.Prislusenstvo/obrazok-25.jpg", cells: ["Podložka malá a veľká", "6,3 x 19mm a 6,3 x 25mm"] },
-      { image: "/sources/4.Prislusenstvo/obrazok-26.jpg", cells: ["Podložka nerezová", "6,3 x 25mm"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-25.jpg", cells: ["Podložka malá a veľká", "6.3 x 19mm a 6.3 x 25mm"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-26.jpg", cells: ["Podložka nerezová", "6.3 x 25mm"] },
       { image: "/sources/4.Prislusenstvo/new-3.jpeg", cells: ["Silikón Sikacil C 300ml", "300ml"] },
       { image: "/sources/4.Prislusenstvo/new-4.jpg", cells: ["FIX Lepidlo 290ml, transparent", "290ml"] }
     ]
