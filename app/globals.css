@@ -230,9 +230,8 @@ img {
   inset: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 2s ease;
 }
 
 .home-hero-image.active {
@@ -1646,7 +1645,8 @@ img {
   }
 
   .products-sidebar {
-    width: 100%;
+    width: 90vw;
+    margin: 0 auto;
     border-right: 0;
     border-bottom: 1px solid #e0e0e0;
   }
@@ -1768,6 +1768,8 @@ img {
 
   .products-main {
     padding: 30px 0;
+    width: 90vw;
+    margin: 0 auto;
   }
 
   .legacy-product-text h2 {

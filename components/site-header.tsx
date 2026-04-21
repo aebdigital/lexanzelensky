@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { navigation } from "../lib/site-data";
@@ -43,7 +44,14 @@ export function SiteHeader() {
         <div className="site-container">
           <div className="site-header-inner">
             <Link href="/" className="site-logo" aria-label="LEXAN domov">
-              <img src={solidHeader ? "/logo2.png" : "/new.png"} alt="LEXAN" />
+              <Image 
+                src={solidHeader ? "/logo2.png" : "/new.png"} 
+                alt="LEXAN" 
+                width={180} 
+                height={60} 
+                priority
+                className="object-contain w-auto h-[45px] md:h-[60px]"
+              />
             </Link>
 
             <ul className={open ? "site-nav is-open" : "site-nav"}>

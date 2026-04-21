@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { homeHeroImages } from "../lib/site-data";
@@ -22,13 +23,16 @@ export function HomeHero() {
           <div
             key={image}
             className={index === activeIndex ? "home-hero-image active" : "home-hero-image"}
-            style={{ 
-              backgroundImage: `url('${image}')`, 
-              backgroundSize: 'cover', 
-              backgroundPosition: 'center', 
-              backgroundAttachment: 'fixed' 
-            }}
-          />
+          >
+            <Image
+              src={image}
+              alt="Lexan Hero"
+              fill
+              priority={index === 0}
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
         ))}
       </div>
       <div className="home-hero-overlay" />
