@@ -8,7 +8,11 @@ export const metadata: Metadata = legacyMetadata("contact");
 export default function ContactPage() {
   return (
     <main>
-      <PageHero title="Kontakt" backgroundImage="/sources/7.Kontakty-a-pobocky/img_1497-1.jpg" />
+      <PageHero 
+        title="Kontakt" 
+        subtitle="Otvorené: PON-PIA 8:00 - 16:00"
+        backgroundImage="/sources/7.Kontakty-a-pobocky/img_1497-1.jpg" 
+      />
 
       <ContactPageClient />
     </main>

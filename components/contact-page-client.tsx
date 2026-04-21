@@ -145,7 +145,8 @@ export function ContactPageClient() {
                       </strong>
                       <span className="mb-2 block text-[#666]">{branch.address}</span>
                       <span className="mb-2 block font-semibold text-[#5a5a58]">{branch.phone}</span>
-                      <span className="block text-[#666]">{branch.email}</span>
+                      <span className="mb-2 block text-[#666]">{branch.email}</span>
+                      <span className="block text-sm font-medium text-[#c00000]">PON-PIA: 8:00 - 16:00</span>
                     </span>
                   </span>
                 </button>
