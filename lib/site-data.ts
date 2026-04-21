@@ -47,9 +47,9 @@ export const navigation = [
 ] as const;
 
 export const homeHeroImages = [
-  "/sources/Uvodna-stranka/Posuvacia-cast-2.jpg",
-  "/sources/Uvodna-stranka/Posuvacia-cast-1.jpg",
-  "/sources/Uvodna-stranka/Posuvacia-cast-3.jpeg"
+  "/sources/Uvodna-stranka/posuvacia-cast-2.jpg",
+  "/sources/Uvodna-stranka/posuvacia-cast-1.jpg",
+  "/sources/Uvodna-stranka/posuvacia-cast-3.jpeg"
 ];
 
 export const stats = [
@@ -101,8 +101,8 @@ export const products: ProductCategory[] = [
     pageTitle: "Dutinkový polykarbonát",
     shortDescription:
       "Vysokokvalitné dutinkové polykarbonátové platne pre rôzne aplikácie. Výborná izolácia, odolnosť a svetelnost pre skleníky, pergoly a fasády.",
-    heroImage: "/sources/1.Dutinkove-polykarbonaty/Fotka-za-nazvom.jpg",
-    teaserImage: "/sources/Uvodna-stranka/uvod-Dutinkove-Polykarbonaty.jpg",
+    heroImage: "/sources/1.Dutinkove-polykarbonaty/fotka-za-nazvom.jpg",
+    teaserImage: "/sources/Uvodna-stranka/uvod-dutinkove-polykarbonaty.jpg",
     heroLabel: "LEXAN® Thermoclear Plus",
     intro: [
       "Dutinkový Lexan",
@@ -168,7 +168,7 @@ export const products: ProductCategory[] = [
           "• Výrazné zníženie IR žiarenia",
           "• Zabráňuje prílišnému prehriatiu interiéru"
         ],
-        image: "/sources/1.Dutinkove-polykarbonaty/SOLAR CONTROL GREY .jpg"
+        image: "/sources/1.Dutinkove-polykarbonaty/solar-control-grey.jpg"
       },
       {
         title: "IR GREEN",
@@ -192,8 +192,8 @@ export const products: ProductCategory[] = [
     pageTitle: "PLNÉ POLYKARBONÁTY",
     shortDescription:
       "Plné polykarbonátové dosky s vysokými mechanickými vlastnosťami. Ideálne pre náročné aplikácie vyžadujúce maximálnu pevnosť a priehladnosť.",
-    heroImage: "/sources/2.Plne-polykarbonaty/Obrazok-za-hlavnym-nadpisom.jpg",
-    teaserImage: "/sources/Uvodna-stranka/uvod-Plne-polykarbonaty.jpg",
+    heroImage: "/sources/2.Plne-polykarbonaty/obrazok-za-hlavnym-nadpisom.jpg",
+    teaserImage: "/sources/Uvodna-stranka/uvod-plne-polykarbonaty.jpg",
     heroLabel: "Plný Lexan",
     intro: [
       "Rozdiel medzi plným Lexanom a plexisklom",
@@ -256,7 +256,7 @@ export const products: ProductCategory[] = [
     shortDescription:
       "Vysokokvalitné HPL a Bond dosky pre vonkajšie aj vnútorné použitie. Výborná odolnosť proti počasiu a mechanickému poškodeniu.",
     heroImage: "/sources/3.HPL-dosky/obrazok-za-hlavnym-nadpisom.jpg",
-    teaserImage: "/sources/Uvodna-stranka/uvod-HPL-a-Bond-platne.jpg",
+    teaserImage: "/sources/Uvodna-stranka/uvod-hpl-a-bond-platne.jpg",
     heroLabel: "Odolné obkladové riešenia",
     intro: [
       "Čo sú to HPL platne?",
@@ -298,8 +298,8 @@ export const products: ProductCategory[] = [
           "Komplexný katalóg produktov Kronoart s technickými špecifikáciami a vzormi:"
         ],
         links: [
-          { label: "Stiahnuť vzorkovník PDF", href: "/sources/3.HPL-dosky/senoplan-K-2024.pdf" },
-          { label: "Stiahnuť katalóg PDF", href: "/sources/3.HPL-dosky/Katalog Kronoart .pdf" }
+          { label: "Stiahnuť vzorkovník PDF", href: "/sources/3.HPL-dosky/senoplan-k-2024.pdf" },
+          { label: "Stiahnuť katalóg PDF", href: "/sources/3.HPL-dosky/katalog-kronoart.pdf" }
         ],
         image: "/sources/3.HPL-dosky/obrazok-3.jpg"
       },
@@ -344,8 +344,8 @@ export const products: ProductCategory[] = [
     pageTitle: "Príslušenstvo",
     shortDescription:
       "Kompletné príslušenstvo pre montáž polykarbonátov - profily, tesniace pásy, spojo-vacie prvky a montážne materiály.",
-    heroImage: "/sources/4.Prislusenstvo/Fotka-za-hlavnym-nadpisom.jpeg",
-    teaserImage: "/sources/Uvodna-stranka/uvod-Prislusenstvo.jpg",
+    heroImage: "/sources/4.Prislusenstvo/fotka-za-hlavnym-nadpisom.jpeg",
+    teaserImage: "/sources/Uvodna-stranka/uvod-prislusenstvo.jpg",
     heroLabel: "Všetko pre montáž na jednom mieste",
     intro: [
       "Aby bol výsledok kvalitný, odolný a dlhodobo funkčný, nestačí len dobrý materiál – potrebujete aj správne príslušenstvo. U nás nájdete všetko, čo k profesionálnej montáži potrebujete.",
@@ -363,7 +363,7 @@ export const products: ProductCategory[] = [
           "Spodné a tesniace gumové pásy",
           "Spojovacie príslušenstvo"
         ],
-        image: "/sources/4.Prislusenstvo/Hliníkove-profily.png"
+        image: "/sources/4.Prislusenstvo/hlinikove-profily.png"
       },
       {
         title: "Hliníkové profily",
@@ -428,7 +428,7 @@ export const products: ProductCategory[] = [
     shortDescription:
       "Polykarbonátové trapézy a vlnovky pre streché, pergoly a tieňovacie systémy. Rôzne profily a hrubky podľa požiadaviek.",
     heroImage: "/sources/5.Trapezy-a-Vlnovky/fotka-za-hlavny-nadpis.jpg",
-    teaserImage: "/sources/Uvodna-stranka/uvod-Trapezy-a-Vlnovky.jpg",
+    teaserImage: "/sources/Uvodna-stranka/uvod-trapezy-a-vlnovky.jpg",
     heroLabel: "Svetlo, krytie a nízka hmotnosť",
     intro: [
       "Trapézy a vlnovky vyrobené z polykarbonátu sa vyznačujú vysokou odolnosťou a pružnosťou. Jednoduchá montáž na strešné laty bez použitia akýchkoľvek profilov len pomocou skrutiek a podložiek je jednou z mnohých predností tohto materiálu.",
@@ -456,7 +456,7 @@ export const products: ProductCategory[] = [
           "Základné: • Číra • Hnedá bronzová",
           "Špeciálne prevedenie: • Solar Control Silver (dostupné pri trapézoch)"
         ],
-        image: "/sources/5.Trapezy-a-Vlnovky/fotka 1.jpg"
+        image: "/sources/5.Trapezy-a-Vlnovky/fotka-1.jpg"
       }
     ]
   },
@@ -495,7 +495,7 @@ export const products: ProductCategory[] = [
           "2, 3, 4, 5, 6 m",
           "Štandardné rozmery"
         ],
-        image: "/sources/6.Skleniky/obrazok 5.jpg"
+        image: "/sources/6.Skleniky/obrazok-5.jpg"
       },
       {
         title: "Prečo si vybrať práve nás?",
@@ -556,7 +556,7 @@ export const serviceBlocks = [
     title: "Predaj a distribúcia materiálu",
     copy:
       "Dodávame dutinkové a plné polykarbonáty, HPL dosky, trapézy, vlnovky a kompletné montážne príslušenstvo. Materiál vieme pripraviť na mieru podľa projektu.",
-    image: "/sources/1.Dutinkove-polykarbonaty/Fotka-za-nazvom.jpg"
+    image: "/sources/1.Dutinkove-polykarbonaty/fotka-za-nazvom.jpg"
   },
   {
     title: "Odborné poradenstvo",
@@ -568,7 +568,7 @@ export const serviceBlocks = [
     title: "Montáž a výroba na mieru",
     copy:
       "Pri hotových konštrukciách zabezpečujeme montáž polykarbonátových dosiek a pri špecifických projektoch prepájame klientov s overenými stolármi a zámočníkmi.",
-    image: "/sources/4.Prislusenstvo/Fotka-za-hlavnym-nadpisom.jpeg"
+    image: "/sources/4.Prislusenstvo/fotka-za-hlavnym-nadpisom.jpeg"
   }
 ] as const;
 

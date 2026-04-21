@@ -29,59 +29,59 @@ const accessoryTabs: {
     key: "aluminum",
     title: "Hliníkové profily",
     className: "aluminum-profiles",
-    tabImage: "/sources/4.Prislusenstvo/Hliníkove-profily.png",
+    tabImage: "/sources/4.Prislusenstvo/hlinikove-profily.png",
     headers: ["Obrázok", "Názov profilu", "Dostupná farba", "Dostupné rozmery (m)"],
     rows: [
-      { image: "/sources/4.Prislusenstvo/obrazok 1.png", cells: ["Prítlačná lišta 60mm", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2, 3, 3,5, 4, 5, 7"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 4.PNG", cells: ["Prítlačná lišta 50mm", "Bez povrchovej úpravy", "2, 3, 3,5, 4, 5, 7"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 5.jpg", cells: ["H profil 10mm a 16mm", "Bez povrchovej úpravy", "2, 3, 6"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 6.jpg", cells: ["F Profil 6, 8, 10, 16mm", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2,133, 3,20, 4,266, 6,40"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 9.jpg", cells: ["U profil 6, 8 mm", "Bez povrchovej úpravy", "2, 3, 6"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 10.jpg", cells: ["U profil 10, 16mm", "Strieborný elox, bronz elox", "2,133, 3,20, 4,266, 6,40"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 12.jpg", cells: ["Nástenný S Profil", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2,133, 3,20, 4,266, 6,40"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 14.jpg", cells: ["L Profil 15x15, 20x20, 25x25, 30x30, 40x20, 40x40", "Bez povrchovej úpravy", "2, 3, 6"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 16.jpg", cells: ["Pásovina 30 a 40mm", "Bez povrchovej úpravy", "2, 3, 6"] }
+      { image: "/sources/4.Prislusenstvo/obrazok-1.png", cells: ["Prítlačná lišta 60mm", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2, 3, 3,5, 4, 5, 7"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-4.png", cells: ["Prítlačná lišta 50mm", "Bez povrchovej úpravy", "2, 3, 3,5, 4, 5, 7"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-5.jpg", cells: ["H profil 10mm a 16mm", "Bez povrchovej úpravy", "2, 3, 6"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-6.jpg", cells: ["F Profil 6, 8, 10, 16mm", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2,133, 3,20, 4,266, 6,40"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-9.jpg", cells: ["U profil 6, 8 mm", "Bez povrchovej úpravy", "2, 3, 6"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-10.jpg", cells: ["U profil 10, 16mm", "Strieborný elox, bronz elox", "2,133, 3,20, 4,266, 6,40"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-12.jpg", cells: ["Nástenný S Profil", "Bez povrchovej úpravy, bronz elox, antracit šedý", "2,133, 3,20, 4,266, 6,40"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-14.jpg", cells: ["L Profil 15x15, 20x20, 25x25, 30x30, 40x20, 40x40", "Bez povrchovej úpravy", "2, 3, 6"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-16.jpg", cells: ["Pásovina 30 a 40mm", "Bez povrchovej úpravy", "2, 3, 6"] }
     ]
   },
   {
     key: "plastic",
     title: "Plastové polykarbonátové profily",
     className: "plastic-profiles",
-    tabImage: "/sources/4.Prislusenstvo/Plastove-polykarbonátove-profily.jpg",
+    tabImage: "/sources/4.Prislusenstvo/plastove-polykarbonatove-profily.jpg",
     headers: ["Obrázok", "Názov profilu", "Dostupné rozmery (m)"],
     rows: [
-      { image: "/sources/4.Prislusenstvo/obrazok 17.PNG", cells: ["U profil PC 4,6,8,10 a 16mm", "2,1m"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 18.PNG", cells: ["H profil PC 4,6,8,10 a 16mm (Pri 10 a 16mm verziách sú profily dostupné aj v prevedení hnedý bronz)", "2, 3, 4 a 6"] }
+      { image: "/sources/4.Prislusenstvo/obrazok-17.png", cells: ["U profil PC 4,6,8,10 a 16mm", "2,1m"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-18.png", cells: ["H profil PC 4,6,8,10 a 16mm (Pri 10 a 16mm verziách sú profily dostupné aj v prevedení hnedý bronz)", "2, 3, 4 a 6"] }
     ]
   },
   {
     key: "rubber",
     title: "Spodné a tesniace gumové pásy",
     className: "rubber-seals",
-    tabImage: "/sources/4.Prislusenstvo/Spodne-a-tesniace-gumove-pasy.png",
+    tabImage: "/sources/4.Prislusenstvo/spodne-a-tesniace-gumove-pasy.png",
     headers: ["Obrázok", "Názov", "Dostupnosť"],
     rows: [
-      { image: "/sources/4.Prislusenstvo/obrazok 19.jpg", cells: ["Tesnenie do prítlačnej lišty 60mm", "Bežné metre"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 20.jpg", cells: ["Tesnenie do prítlačnej lišty 50mm", "Bežné metre"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 21.jpg", cells: ["Spodná guma 50, 60 a 80mm", "Bežné metre"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 22.jpg", cells: ["Tesnenie do nástenného S Profilu", "Bežné metre"] },
-      { image: "/sources/4.Prislusenstvo/new 1.jpg", cells: ["Tesniaca páska s filtrom 28/38mm", "Bežné metre"] },
-      { image: "/sources/4.Prislusenstvo/new 2.jpg", cells: ["Tesniaca páska bez filtra 28/38mm", "Bežné metre"] }
+      { image: "/sources/4.Prislusenstvo/obrazok-19.jpg", cells: ["Tesnenie do prítlačnej lišty 60mm", "Bežné metre"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-20.jpg", cells: ["Tesnenie do prítlačnej lišty 50mm", "Bežné metre"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-21.jpg", cells: ["Spodná guma 50, 60 a 80mm", "Bežné metre"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-22.jpg", cells: ["Tesnenie do nástenného S Profilu", "Bežné metre"] },
+      { image: "/sources/4.Prislusenstvo/new-1.jpg", cells: ["Tesniaca páska s filtrom 28/38mm", "Bežné metre"] },
+      { image: "/sources/4.Prislusenstvo/new-2.jpg", cells: ["Tesniaca páska bez filtra 28/38mm", "Bežné metre"] }
     ]
   },
   {
     key: "connecting",
     title: "Spojovacie príslušenstvo",
     className: "connecting-accessories",
-    tabImage: "/sources/4.Prislusenstvo/Spojovacie-prislusenstvo.jpeg",
+    tabImage: "/sources/4.Prislusenstvo/spojovacie-prislusenstvo.jpeg",
     headers: ["Obrázok", "Názov", "Rozmery"],
     rows: [
-      { image: "/sources/4.Prislusenstvo/obrazok 23.jpg", cells: ["Vrut do dreva", "40, 50, 60 a 70mm"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 24.jpg", cells: ["Tex samorezný", "25, 32, 38, 45, 50 a 60mm"] },
-      { image: "/sources/4.Prislusenstvo/obrazok 25.jpg", cells: ["Podložka malá a veľká", "-"] },
-      { image: "/sources/4.Prislusenstvo/Obrazok 26.jpg", cells: ["Podložka nerezová", "-"] },
-      { image: "/sources/4.Prislusenstvo/new 3.jpeg", cells: ["Silikón Sikacil C 300ml", "300ml"] },
-      { image: "/sources/4.Prislusenstvo/new 4.jpg", cells: ["FIX Lepidlo 290ml, transparent", "290ml"] }
+      { image: "/sources/4.Prislusenstvo/obrazok-23.jpg", cells: ["Vrut do dreva", "40, 50, 60 a 70mm"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-24.jpg", cells: ["Tex samorezný", "25, 32, 38, 45, 50 a 60mm"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-25.jpg", cells: ["Podložka malá a veľká", "-"] },
+      { image: "/sources/4.Prislusenstvo/obrazok-26.jpg", cells: ["Podložka nerezová", "-"] },
+      { image: "/sources/4.Prislusenstvo/new-3.jpeg", cells: ["Silikón Sikacil C 300ml", "300ml"] },
+      { image: "/sources/4.Prislusenstvo/new-4.jpg", cells: ["FIX Lepidlo 290ml, transparent", "290ml"] }
     ]
   }
 ];
@@ -298,9 +298,9 @@ function DutinkovePolykarbonaty() {
           </div>
           <div className="legacy-product-image-container">
             <div className="legacy-two-image-row">
-              <img src="/sources/1.Dutinkove-polykarbonaty/SOLAR CONTROL GREY .jpg" alt="ARLA Solar Control Grey" />
+              <img src="/sources/1.Dutinkove-polykarbonaty/solar-control-grey.jpg" alt="ARLA Solar Control Grey" />
               <img
-                src="/sources/1.Dutinkove-polykarbonaty/SOLAR CONTROL TRANSPARENT.jpg"
+                src="/sources/1.Dutinkove-polykarbonaty/solar-control-transparent.jpg"
                 alt="ARLA Solar Control Transparent"
               />
             </div>
@@ -482,14 +482,14 @@ function HplBond() {
             <div className="legacy-catalog-card legacy-catalog-dark">
               <h4>📄 KATALÓG SENOPLAN</h4>
               <p>Aktuálny vzorkovník a rozmery pre rok 2025 nájdete na stiahnutie tu:</p>
-              <a href="/sources/3.HPL-dosky/senoplan-K-2024.pdf" target="_blank" rel="noreferrer">
+              <a href="/sources/3.HPL-dosky/senoplan-k-2024.pdf" target="_blank" rel="noreferrer">
                 Stiahnuť vzorkovník PDF
               </a>
             </div>
             <div className="legacy-catalog-card">
               <h4>📋 KATALÓG KRONOART</h4>
               <p>Komplexný katalóg produktov Kronoart s technickými špecifikáciami a vzormi:</p>
-              <a href="/sources/3.HPL-dosky/Katalog Kronoart .pdf" target="_blank" rel="noreferrer">
+              <a href="/sources/3.HPL-dosky/katalog-kronoart.pdf" target="_blank" rel="noreferrer">
                 Stiahnuť katalóg PDF
               </a>
             </div>
@@ -580,8 +580,8 @@ function TrapezyVlnovky() {
         </p>
       </ProductHero>
       <div className="legacy-dual-images legacy-mt-40">
-        <ImageBlock src="/sources/5.Trapezy-a-Vlnovky/fotka 1.jpg" alt="Trapézy detailný pohľad" />
-        <ImageBlock src="/sources/5.Trapezy-a-Vlnovky/fotka 2.jpg" alt="Vlnovky detailný pohľad" />
+        <ImageBlock src="/sources/5.Trapezy-a-Vlnovky/fotka-1.jpg" alt="Trapézy detailný pohľad" />
+        <ImageBlock src="/sources/5.Trapezy-a-Vlnovky/fotka-2.jpg" alt="Vlnovky detailný pohľad" />
       </div>
       <Section title="Technické špecifikácie">
         <div className="legacy-product-content-wrapper">
@@ -594,7 +594,7 @@ function TrapezyVlnovky() {
               <Feature title="ŠTANDARDNÉ FARBY"><p><strong>Základné:</strong><br />• Číra<br />• Hnedá bronzová<br /><br /><strong>Špeciálne prevedenie:</strong><br />• Solar Control Silver</p></Feature>
             </div>
           </div>
-          <ImageBlock src="/sources/5.Trapezy-a-Vlnovky/obrazok 3.jpg" alt="Technické detaily trapézov a vlnoviek" />
+          <ImageBlock src="/sources/5.Trapezy-a-Vlnovky/obrazok-3.jpg" alt="Technické detaily trapézov a vlnoviek" />
         </div>
       </Section>
     </>

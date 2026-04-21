@@ -5,7 +5,7 @@ type PageHeroProps = {
 
 export function PageHero({
   title,
-  backgroundImage = "/sources/Uvodna-stranka/Posuvacia-cast-2.jpg"
+  backgroundImage = "/sources/Uvodna-stranka/posuvacia-cast-2.jpg"
 }: PageHeroProps) {
   return (
     <section

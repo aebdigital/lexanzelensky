@@ -44,7 +44,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
                 <Image
-                  src="/sources/1.Dutinkove-polykarbonaty/Fotka-za-nazvom.jpg"
+                  src="/sources/1.Dutinkove-polykarbonaty/fotka-za-nazvom.jpg"
                   alt="Predaj a distribúcia materiálu"
                   fill
                   className="object-cover"
@@ -114,7 +114,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
                 <Image
-                  src="/sources/4.Prislusenstvo/Fotka-za-hlavnym-nadpisom.jpeg"
+                  src="/sources/4.Prislusenstvo/fotka-za-hlavnym-nadpisom.jpeg"
                   alt="Montáž a výroba na mieru"
                   fill
                   className="object-cover"

@@ -106,7 +106,7 @@ export default function AboutPage() {
             <div className="about-split-grid">
               <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
                 <Image
-                  src="/sources/4.Prislusenstvo/Fotka-za-hlavnym-nadpisom.jpeg"
+                  src="/sources/4.Prislusenstvo/fotka-za-hlavnym-nadpisom.jpeg"
                   alt="Montáž"
                   fill
                   className="object-cover"
