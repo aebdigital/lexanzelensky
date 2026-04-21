@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "../../components/page-hero";
 import { ProductCardGrid } from "../../components/product-card-grid";
 import { legacyMetadata } from "../../lib/seo";
@@ -30,19 +31,23 @@ export default function AboutPage() {
                   zákazníkom všetko potrebné na jednom mieste – efektívne, rýchlo a bez starostí.
                 </p>
               </div>
-              <div className="content-image-box">
-                <img
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image
                   src="/sources/1.Dutinkove-polykarbonaty/3.jpg"
                   alt="LEXAN polykarbonátové dosky"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
 
             <div className="about-split-grid">
-              <div className="content-image-box">
-                <img
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image
                   src="/sources/about-quality.jpg"
                   alt="LEXAN služby a poradenstvo"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="content-text">
@@ -88,19 +93,23 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="content-image-box">
-                <img
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image
                   src="/sources/6.Skleniky/fotka-za-hlavnym-nadpisom.jpg"
                   alt="Kvalitné skleníky LEXAN"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
 
             <div className="about-split-grid">
-              <div className="content-image-box">
-                <img
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image
                   src="/sources/4.Prislusenstvo/Fotka-za-hlavnym-nadpisom.jpeg"
                   alt="Montáž"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="content-text">
@@ -148,10 +157,12 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="content-image-box">
-                <img
+              <div className="relative w-full h-[250px] md:h-[400px] shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+                <Image
                   src="/sources/5.Trapezy-a-Vlnovky/fotka-za-hlavny-nadpis.jpg"
                   alt="Doprava a pobočky"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
