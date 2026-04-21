@@ -104,7 +104,7 @@ export default function ServicesPage() {
                   className="mt-5 inline-flex items-center gap-4 border-2 border-[#e0e0e0] bg-white px-6 py-4 no-underline shadow-sm transition hover:-translate-y-0.5"
                 >
                   <img
-                    src="/partneri/NADOO sro logo .png"
+                    src="/partneri/nadoo-sro-logo.png"
                     alt="NADOO"
                     className="h-10 w-auto"
                   />

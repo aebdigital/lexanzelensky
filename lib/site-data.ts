@@ -60,7 +60,7 @@ export const stats = [
 
 export const partnerLogos = [
   { name: "Cutmakers", href: "https://www.cutmakers.sk/", image: "/partneri/cutmakers.png" },
-  { name: "NADOO", href: "https://www.nadoo.sk/", image: "/partneri/NADOO sro logo .png" },
+  { name: "NADOO", href: "https://www.nadoo.sk/", image: "/partneri/nadoo-sro-logo.png" },
   { name: "Homemakers", href: "https://www.homemakers.sk/", image: "/partneri/homemakers.png" }
 ];
 
