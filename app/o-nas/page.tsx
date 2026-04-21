@@ -41,7 +41,7 @@ export default function AboutPage() {
             <div className="about-split-grid">
               <div className="content-image-box">
                 <img
-                  src="/sources/new.jpg"
+                  src="/sources/about-quality.jpg"
                   alt="LEXAN služby a poradenstvo"
                 />
               </div>
