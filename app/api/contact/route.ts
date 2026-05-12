@@ -130,7 +130,9 @@ export async function POST(request: Request) {
       subject: `[LEXAN] ${subject}`,
       text_body: textBody,
       html_body: htmlBody,
-      reply_to: email,
+      custom_headers: [
+        { header: "Reply-To", value: `${name} <${email}>` },
+      ],
       attachments
     })
   });

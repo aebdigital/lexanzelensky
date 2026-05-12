@@ -14,8 +14,6 @@ type EncodedFile = {
   content: string;
 };
 
-const netlifyContactEndpoint = "/.netlify/functions/contact";
-
 function fileToBase64(file: File) {
   return new Promise<EncodedFile>((resolve, reject) => {
     const reader = new FileReader();
@@ -70,24 +68,13 @@ export function ContactPageClient() {
         files: encodedFiles
       };
 
-      let response = await fetch(netlifyContactEndpoint, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(requestPayload)
       });
-
-      const contentType = response.headers.get("content-type") ?? "";
-      if (response.status === 404 || !contentType.includes("application/json")) {
-        response = await fetch("/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(requestPayload)
-        });
-      }
       const responsePayload = (await response.json()) as { success: boolean; message: string };
 
       setSubmission({
